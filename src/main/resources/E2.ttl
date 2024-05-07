@@ -1,0 +1,212 @@
+# ANNAHMEN
+
+
+@prefix ex: <http://airline.de/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+## -- X --
+ex:Airport
+    a rdfs:Class ;
+    rdfs:comment "Klasse, die einen Flughafen beschreibt" .
+
+
+## -- X --
+ex:AirlineAirportOperation
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:atAirport
+    a rdf:Property ;
+    rdfs:domain ex:AirlineAirportOperation ;
+    rdfs:range ex:Airport ;
+    rdfs:comment "" .
+
+ex:inYear
+    a rdf:Property ;
+    rdfs:domain ex:AirlineAirportOperation ;
+    rdfs:range xsd:datetime ; #TODO: Check if correct
+    rdfs:comment "" .
+
+
+## -- X --
+ex:Airline
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:numberOfEmployees
+    a rdf:Property ;
+    rdfs:domain ex:Airline ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "" .
+
+ex:hasManager
+    a rdf:Property ;
+    rdfs:domain ex:Airline ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+ex:hasStartedOperation
+    a rdf:Property ;
+    rdfs:domain ex:Airline ;
+    rdfs:range ex:AirlineAirportOperation ;
+    rdfs:comment "" .
+
+
+## -- X --
+ex:FlightRoute
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:hasFlightNumber
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range ex:Airport ;
+    rdfs:comment "" .
+
+ex:hasDeparture
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range ex:Airport ;
+    rdfs:comment "" .
+
+ex:hasDestination
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range ex:Airport ;
+    rdfs:comment "" .
+
+ex:hasDuration
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range xsd:float ;
+    rdfs:comment "" .
+
+ex:hasPlaneModel
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range xsd:string ; # TODO: evtl. anderer Datentyp
+    rdfs:comment "" .
+
+ex:maxNumberOfPassengers
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "" .
+
+
+## -- X --
+ex:Flight
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:operates
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range ex:FlightRoute ;
+    rdfs:comment "" .
+
+ex:hasCallsign
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+ex:hasDepatureTime
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range xsd:datetime ; #TODO: Check if correct
+    rdfs:comment "" .
+
+ex:hasArivalTime
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range xsd:datetime ; #TODO: Check if correct
+    rdfs:comment "" .
+
+
+## -- X --
+ex:Customer
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:hasName
+    a rdf:Property ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+ex:hasPassportNumber
+    a rdf:Property ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "" .
+
+
+## -- X --
+ex:FlightTicket
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:bookedBy
+    a rdf:Property ;
+    rdfs:domain ex:FlightTicket ;
+    rdfs:range ex:Customer ;
+    rdfs:comment "" .
+
+ex:seatClassification
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range xsd:string .
+
+ex:seatIdentification
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range xsd:string .
+
+
+## -- X --
+ex:Trip
+    a rdfs:Class ;
+    rdfs:comment "" .
+
+ex:containsFlights
+    a rdf:Property ;
+    rdfs:domain ex:Trip ;
+    rdfs:range rdf:Seq ;
+    rdfs:comment "" .
+
+ex:hasPrice
+    a rdf:Property ;
+    rdfs:domain ex:Trip ;
+    rdfs:range xsd:float ; #TODO: Check if correct
+    rdfs:comment "" .
+
+ex:hasTimestamp
+    a rdf:Property ;
+    rdfs:domain ex:Trip ;
+    rdfs:range xsd:datetime ; #TODO: Check if correct
+    rdfs:comment "" .
+
+
+
+## --
+
+ex:BER a ex:Airport .
+ex:JFK a ex:Airport .
+ex:FCO a ex:Airport .
+ex:LHR a ex:Airport .
+
+
+ex:AirTrier
+    a ex:Airline ;
+    ex:numberOfEmployees 420 ;
+    ex:hasManager "Manager" ;
+    ex:hasStartedOperation ex:A ;
+    ex:hasStartedOperation ex:B ;
+    ex:hasStartedOperation ex:C ;
+    ex:hasStartedOperation ex:D .
+
+
+

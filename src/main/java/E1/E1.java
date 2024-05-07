@@ -36,6 +36,7 @@ public class E1 {
                 .addLiteral(model.createProperty(mainNamespace + "/fullName"), fnBergmann)
                 .addLiteral(model.createProperty(mainNamespace + "/email"), emailBergmann);
 
+
         Resource tutor = model.createResource(mainNamespace + "/tutor")
                 .addLiteral(model.createProperty(mainNamespace + "/tutorFullName"), fnHoffmann)
                 .addLiteral(model.createProperty(mainNamespace + "tutorMail"), emailHoffmann);
@@ -53,7 +54,5 @@ public class E1 {
 
         //Writing the model to the console
         RDFDataMgr.write(System.out, model, Lang.RDFXML);
-
-
     }
 }
