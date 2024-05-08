@@ -26,7 +26,7 @@ ex:atAirport
 ex:inYear
     a rdf:Property ;
     rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range xsd:datetime ; #TODO: Check if correct
+    rdfs:range xsd:date ; #TODO: Check if correct
     rdfs:comment "" .
 
 
@@ -62,7 +62,7 @@ ex:FlightRoute
 ex:hasFlightNumber
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airport ;
+    rdfs:range xsd:string ;
     rdfs:comment "" .
 
 ex:hasDeparture
@@ -203,10 +203,107 @@ ex:AirTrier
     a ex:Airline ;
     ex:numberOfEmployees 420 ;
     ex:hasManager "Manager" ;
-    ex:hasStartedOperation ex:A ;
+    ex:hasStartedOperation ex:BER_Operation ;
     ex:hasStartedOperation ex:B ;
     ex:hasStartedOperation ex:C ;
     ex:hasStartedOperation ex:D .
 
+
+
+ex:BER_Operation
+    a ex:AirlineAirportOperation ;
+    ex:atAirport ex:BER ;
+    ex:inYear "2002-09-24" .
+
+ex:B
+    a ex:AirlineAirportOperation ;
+    ex:atAirport ex:JFK ;
+    ex:inYear "2002-09-24" .
+
+ex:C
+    a ex:AirlineAirportOperation ;
+    ex:atAirport ex:FCO ;
+    ex:inYear "2002-09-24" .
+
+ex:D
+    a ex:AirlineAirportOperation ;
+    ex:atAirport ex:LHR ;
+    ex:inYear "abs" .
+
+
+ex:AT_BE_JF
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0102" ;
+    ex:hasDeparture ex:BER ;
+    ex:hasDestination ex:JFK ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "B747-SP" ;
+    ex:maxNumberOfPassengers 440 .
+
+ex:AT_JF_FC
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0203" ;
+    ex:hasDeparture ex:JFK ;
+    ex:hasDestination ex:FCO ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "A380-800" ;
+    ex:maxNumberOfPassengers 850 .
+
+ex:AT_FC_LH
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0304" ;
+    ex:hasDeparture ex:FCO ;
+    ex:hasDestination ex:LHR ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "A340-600" ;
+    ex:maxNumberOfPassengers 380 .
+
+ex:AT_LH_BE
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0401" ;
+    ex:hasDeparture ex:LHR ;
+    ex:hasDestination ex:BER ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "A350-1000" ;
+    ex:maxNumberOfPassengers 350 .
+
+ex:AT_BE_FC
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0103" ;
+    ex:hasDeparture ex:BER ;
+    ex:hasDestination ex:FCO ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "A320" ;
+    ex:maxNumberOfPassengers 440 .
+
+ex:AT_JF_LH_B
+    a ex:FlightRoute ;
+    ex:hasFlightNumber "AT0204" ;
+    ex:hasDeparture ex:JFK ;
+    ex:hasDestination ex:LHR ;
+    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
+    ex:hasPlaneModel "A320" ;
+    ex:maxNumberOfPassengers 440 .
+
+
+ex:Cus1
+    a ex:Customer ;
+    ex:hasName "" ;
+    ex:hasPassportNumber 1 .
+
+ex:Cus2
+    a ex:Customer ;
+    ex:hasName "" ;
+    ex:hasPassportNumber 2 .
+
+ex:Cus3
+    a ex:Customer ;
+    ex:hasName "" ;
+    ex:hasPassportNumber 3 .
+
+ex:Cus4
+    a ex:Customer ;
+    ex:hasName "" ;
+    ex:hasPassportNumber 4 .
 
 
