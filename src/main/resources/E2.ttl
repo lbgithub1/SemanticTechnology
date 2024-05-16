@@ -26,7 +26,7 @@ ex:atAirport
 ex:inYear
     a rdf:Property ;
     rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range xsd:date ; #TODO: Check if correct
+    rdfs:range xsd:gYear ; #TODO: Check if correct
     rdfs:comment "" .
 
 
@@ -59,6 +59,12 @@ ex:FlightRoute
     a rdfs:Class ;
     rdfs:comment "" .
 
+ex:operatedBy
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range ex:Airline ;
+    rdfs:comment "" .
+
 ex:hasFlightNumber
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
@@ -80,13 +86,13 @@ ex:hasDestination
 ex:hasDuration
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:float ;
+    rdfs:range xsd:float ; #TODO: Umstieg auf xsd:duration
     rdfs:comment "" .
 
 ex:hasPlaneModel
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:string ; # TODO: evtl. anderer Datentyp
+    rdfs:range xsd:string ;
     rdfs:comment "" .
 
 ex:maxNumberOfPassengers
@@ -101,7 +107,7 @@ ex:Flight
     a rdfs:Class ;
     rdfs:comment "" .
 
-ex:operates
+ex:operatesRoute  #TODO: RENAME
     a rdf:Property ;
     rdfs:domain ex:Flight ;
     rdfs:range ex:FlightRoute ;
@@ -149,6 +155,12 @@ ex:FlightTicket
     a rdfs:Class ;
     rdfs:comment "" .
 
+ex:forFlight
+    a rdf:Property ;
+    rdfs:domain ex:FlightTicket ;
+    rdfs:range ex:Customer ;
+    rdfs:comment "" .
+
 ex:bookedBy
     a rdf:Property ;
     rdfs:domain ex:FlightTicket ;
@@ -171,7 +183,7 @@ ex:Trip
     a rdfs:Class ;
     rdfs:comment "" .
 
-ex:containsFlights
+ex:containsFlightTickets
     a rdf:Property ;
     rdfs:domain ex:Trip ;
     rdfs:range rdf:Seq ;
@@ -199,111 +211,214 @@ ex:FCO a ex:Airport .
 ex:LHR a ex:Airport .
 
 
-ex:AirTrier
-    a ex:Airline ;
-    ex:numberOfEmployees 420 ;
-    ex:hasManager "Manager" ;
-    ex:hasStartedOperation ex:BER_Operation ;
-    ex:hasStartedOperation ex:B ;
-    ex:hasStartedOperation ex:C ;
-    ex:hasStartedOperation ex:D .
-
-
-
 ex:BER_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:BER ;
-    ex:inYear "2002-09-24" .
+    ex:inYear 2020 .
 
-ex:B
+ex:JFK_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:JFK ;
-    ex:inYear "2002-09-24" .
+    ex:inYear 2000 .
 
-ex:C
+ex:FCO_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:FCO ;
-    ex:inYear "2002-09-24" .
+    ex:inYear 2000 .
 
-ex:D
+ex:LHR_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:LHR ;
-    ex:inYear "abs" .
+    ex:inYear 2001 .
 
 
-ex:AT_BE_JF
+ex:AirTrier
+    a ex:Airline ;
+    ex:numberOfEmployees 420 ;
+    ex:hasManager "CarstenSphor" ;
+    ex:hasStartedOperation
+        ex:BER_Operation ,
+        ex:JFK_Operation,
+        ex:FCO_Operation,
+        ex:LHR_Operation.
+
+
+# -- Alle Flüge von Berlin (BER) --
+ex:AT_BER_To_LHR
     a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
     ex:hasFlightNumber "AT0102" ;
     ex:hasDeparture ex:BER ;
-    ex:hasDestination ex:JFK ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "B747-SP" ;
-    ex:maxNumberOfPassengers 440 .
-
-ex:AT_JF_FC
-    a ex:FlightRoute ;
-    ex:hasFlightNumber "AT0203" ;
-    ex:hasDeparture ex:JFK ;
-    ex:hasDestination ex:FCO ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "A380-800" ;
-    ex:maxNumberOfPassengers 850 .
-
-ex:AT_FC_LH
-    a ex:FlightRoute ;
-    ex:hasFlightNumber "AT0304" ;
-    ex:hasDeparture ex:FCO ;
     ex:hasDestination ex:LHR ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "A340-600" ;
-    ex:maxNumberOfPassengers 380 .
+    ex:hasDuration 2 ; # 2:00 -> PT2H
+    ex:hasPlaneModel "A321XLR" ;
+    ex:maxNumberOfPassengers 0 . #TODO
 
-ex:AT_LH_BE
+ex:AT_BER_To_FCO
     a ex:FlightRoute ;
-    ex:hasFlightNumber "AT0401" ;
-    ex:hasDeparture ex:LHR ;
-    ex:hasDestination ex:BER ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "A350-1000" ;
-    ex:maxNumberOfPassengers 350 .
-
-ex:AT_BE_FC
-    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
     ex:hasFlightNumber "AT0103" ;
     ex:hasDeparture ex:BER ;
     ex:hasDestination ex:FCO ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "A320" ;
+    ex:hasDuration 2.2 ; # 2:10 -> PT2H10M
+    ex:hasPlaneModel "A320neo" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+ex:AT_BER_To_JFK
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0104" ;
+    ex:hasDeparture ex:BER ;
+    ex:hasDestination ex:JFK ;
+    ex:hasDuration 8.7 ; # 8:40 -> PT8H40M
+    ex:hasPlaneModel "A380-800" ;
+    ex:maxNumberOfPassengers 850 .
+
+
+# -- Alle Flüge von London (LHR) --
+ex:AT_LHR_To_BER
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0201" ;
+    ex:hasDeparture ex:LHR ;
+    ex:hasDestination ex:BER ;
+    ex:hasDuration 2 ; # 2:00 -> PT2H
+    ex:hasPlaneModel "A321XLR" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+ex:AT_LHR_To_FCO
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0203" ;
+    ex:hasDeparture ex:LHR ;
+    ex:hasDestination ex:FCO ;
+    ex:hasDuration 2.6 ; # 2:40 -> PT2H40M
+    ex:hasPlaneModel "A319neo" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+ex:AT_LHR_To_JFK
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0204" ;
+    ex:hasDeparture ex:LHR ;
+    ex:hasDestination ex:JFK ;
+    ex:hasDuration 8 ; # 8:00 -> PT8H
+    ex:hasPlaneModel "B747-SP" ;
     ex:maxNumberOfPassengers 440 .
 
-ex:AT_JF_LH_B
+
+# -- Alle Flüge von Rom (FCO) --
+ex:AT_FCO_To_BER
     a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0301" ;
+    ex:hasDeparture ex:FCO ;
+    ex:hasDestination ex:BER ;
+    ex:hasDuration 2.2 ; # 2:10 -> PT2H10M
+    ex:hasPlaneModel "A320neo" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+ex:AT_FCO_To_LHR
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0302" ;
+    ex:hasDeparture ex:FCO ;
+    ex:hasDestination ex:LHR ;
+    ex:hasDuration 2.6 ; # 2:40 -> PT2H40M
+    ex:hasPlaneModel "A319neo" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+ex:AT_FCO_To_JFK
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0301" ;
+    ex:hasDeparture ex:FCO ;
+    ex:hasDestination ex:JFK;
+    ex:hasDuration 9.6 ; # 9:40 -> PT9H40M
+    ex:hasPlaneModel "A350-1000" ;
+    ex:maxNumberOfPassengers 0 . #TODO
+
+
+# -- Alle Flüge von New York (JFK) --
+ex:AT_JFK_To_BER
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0104" ;
+    ex:hasDeparture ex:JFK ;
+    ex:hasDestination ex:BER ;
+    ex:hasDuration 7.7 ; # 7:40 -> PT7H40M
+    ex:hasPlaneModel "A380-800" ;
+    ex:maxNumberOfPassengers 850 .
+
+ex:AT_JFK_To_LHR
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
     ex:hasFlightNumber "AT0204" ;
     ex:hasDeparture ex:JFK ;
     ex:hasDestination ex:LHR ;
-    ex:hasDuration 3.6 ; #TODO: Realistischere Nummer
-    ex:hasPlaneModel "A320" ;
+    ex:hasDuration 7 ; # 7:00 -> PT7H
+    ex:hasPlaneModel "B747-SP" ;
     ex:maxNumberOfPassengers 440 .
 
+ex:AT_JFK_To_FCO
+    a ex:FlightRoute ;
+    ex:operatedBy ex:AirTrier ;
+    ex:hasFlightNumber "AT0301" ;
+    ex:hasDeparture ex:JFK ;
+    ex:hasDestination ex:FCO;
+    ex:hasDuration 8.5 ; # 8:30 -> PT8H30M
+    ex:hasPlaneModel "A350-1000" ;
+    ex:maxNumberOfPassengers 0 . #TODO
 
-ex:Cus1
+
+# -- Definition aller (relevanten) Flüge --
+ex:AT_BER_To_LHR_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_LHR ;
+    ex:hasCallsign "ATBL1" ;
+    ex:hasDepatureTime "2024-05-01T00:00:00" ;
+    ex:hasArivalTime "2024-05-01T02:00:00" .
+
+ex:AT_LHR_To_BER_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_LHR_To_BER ;
+    ex:hasCallsign "ATBL1" ;
+    ex:hasDepatureTime "2024-05-01T20:00:00" ;
+    ex:hasArivalTime "2024-05-01T22:00:00" .
+
+ex:AT_BER_To_FCO_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_FCO ;
+    ex:hasCallsign "ATBF1" ;
+    ex:hasDepatureTime "2024-05-02T08:00:00" ;
+    ex:hasArivalTime "2024-05-02T10:10:00" .
+
+ex:AT_FCO_To_BER_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_FCO ;
+    ex:hasCallsign "ATFB1" ;
+    ex:hasDepatureTime "2024-05-02T11:00:00" ;
+    ex:hasArivalTime "2024-05-02T13:10:00" .
+
+
+
+
+# -- Definition der Kunden sowie deren gebuchten Flüge --
+ex:custumer_1
     a ex:Customer ;
-    ex:hasName "" ;
+    ex:hasName "Alfred Albrecht" ;
     ex:hasPassportNumber 1 .
 
-ex:Cus2
+
+
+
+
+ex:custumer_2
     a ex:Customer ;
-    ex:hasName "" ;
+    ex:hasName "Berndt Brandt" ;
     ex:hasPassportNumber 2 .
 
-ex:Cus3
+ex:custumer_3
     a ex:Customer ;
-    ex:hasName "" ;
+    ex:hasName "Christoph Conrad" ;
     ex:hasPassportNumber 3 .
-
-ex:Cus4
-    a ex:Customer ;
-    ex:hasName "" ;
-    ex:hasPassportNumber 4 .
-
-
