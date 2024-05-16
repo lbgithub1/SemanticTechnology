@@ -8,128 +8,103 @@
 
 ## -- X --
 ex:Airport
-    a rdfs:Class ;
-    rdfs:comment "Klasse, die einen Flughafen beschreibt" .
-
+    a rdfs:Class .
 
 ## -- X --
 ex:AirlineAirportOperation
-    a rdfs:Class ;
-    rdfs:comment "" .
+    a rdfs:Class .
 
 ex:atAirport
     a rdf:Property ;
     rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range ex:Airport ;
-    rdfs:comment "" .
+    rdfs:range ex:Airport .
 
 ex:inYear
     a rdf:Property ;
     rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range xsd:gYear ; #TODO: Check if correct
-    rdfs:comment "" .
+    rdfs:range xsd:gYear .
 
-
-## -- X --
 ex:Airline
-    a rdfs:Class ;
-    rdfs:comment "" .
+    a rdfs:Class .
 
 ex:numberOfEmployees
     a rdf:Property ;
     rdfs:domain ex:Airline ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "" .
+    rdfs:range xsd:integer .
 
 ex:hasManager
     a rdf:Property ;
     rdfs:domain ex:Airline ;
-    rdfs:range xsd:string ;
-    rdfs:comment "" .
+    rdfs:range xsd:string .
 
 ex:hasStartedOperation
     a rdf:Property ;
     rdfs:domain ex:Airline ;
-    rdfs:range ex:AirlineAirportOperation ;
-    rdfs:comment "" .
-
+    rdfs:range ex:AirlineAirportOperation .
 
 ## -- X --
 ex:FlightRoute
-    a rdfs:Class ;
-    rdfs:comment "" .
+    a rdfs:Class .
 
 ex:operatedBy
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airline ;
-    rdfs:comment "" .
+    rdfs:range ex:Airline .
 
 ex:hasFlightNumber
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:string ;
-    rdfs:comment "" .
+    rdfs:range xsd:string .
 
 ex:hasDeparture
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airport ;
-    rdfs:comment "" .
+    rdfs:range ex:Airport .
 
 ex:hasDestination
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airport ;
-    rdfs:comment "" .
+    rdfs:range ex:Airport .
 
 ex:hasDuration
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:float ; #TODO: Umstieg auf xsd:duration
-    rdfs:comment "" .
+    rdfs:range xsd:float .
 
 ex:hasPlaneModel
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:string ;
-    rdfs:comment "" .
+    rdfs:range xsd:string .
 
 ex:maxNumberOfPassengers
     a rdf:Property ;
     rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "" .
-
+    rdfs:range xsd:integer .
 
 ## -- X --
 ex:Flight
-    a rdfs:Class ;
-    rdfs:comment "" .
+    a rdfs:Class .
 
-ex:operatesRoute  #TODO: RENAME
+
+ex:operatesRoute
     a rdf:Property ;
     rdfs:domain ex:Flight ;
-    rdfs:range ex:FlightRoute ;
-    rdfs:comment "" .
+    rdfs:range ex:FlightRoute .
 
 ex:hasCallsign
     a rdf:Property ;
     rdfs:domain ex:Flight ;
-    rdfs:range xsd:string ;
-    rdfs:comment "" .
+    rdfs:range xsd:string .
 
 ex:hasDepatureTime
     a rdf:Property ;
     rdfs:domain ex:Flight ;
-    rdfs:range xsd:datetime ; #TODO: Check if correct
-    rdfs:comment "" .
+    rdfs:range xsd:datetime .
 
 ex:hasArivalTime
     a rdf:Property ;
     rdfs:domain ex:Flight ;
-    rdfs:range xsd:datetime ; #TODO: Check if correct
-    rdfs:comment "" .
+    rdfs:range xsd:datetime .
 
 
 ## -- X --
