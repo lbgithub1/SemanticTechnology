@@ -43,239 +43,163 @@ ex:hasManager
     a rdf:Property .
 
 ex:inYear
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:AirlineAirportOperation ;
+    rdfs:range  xsd:gYear .
 
 ex:atAirport
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:AirlineAirportOperation ;
+    rdfs:range  ex:Airport .
 
 ex:hasDuration
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  xsd:float .
 
 ex:hasPlaneModel
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  xsd:string .
 
 ex:maxNumberOfPassengers
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  xsd:integer .
 
 ex:hasStartedOperation
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:Airline ;
+    rdfs:range  ex:AirlineAirportOperation .
 
 ex:operatedBy
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  ex:Airline .
 
 ex:hasFlightNumber
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  xsd:string .
 
 ex:hasDeparture
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  ex:Airport .
 
 ex:hasDestination
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:FlightRoute ;
+    rdfs:range  ex:Airport .
 
 ex:orderTimestampTrip
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:Trip ;
+    rdfs:range  xsd:dateTime .
 
 ex:hasPrice
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:Trip ;
+    rdfs:range  rdf:float .
 
 ex:hasName
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:Customer ;
+    rdfs:range  xsd:string .
 
 ex:hasPassportNumber
-    a rdf:Property .
+    a           rdf:Property ;
+    rdfs:domain ex:Customer ;
+    rdfs:range  xsd:integer .
 
 ex:seatClassification
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range  xsd:string .
 
 ex:hasDepatureTime
     a rdf:Property .
 
 ex:hasArivalTime
-    a rdf:Property .
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range  xsd:datetime .
 
-ex:bookedBy
-    a rdf:Property .
-
-ex:seatIdentification
-    a rdf:Property .
-
-ex:hasCallsign
-    a rdf:Property .
-
-ex:operatesRoute
-    a rdf:Property .
-
-ex:necessaryTicket
-    a rdf:Property .
-
-#ex:containsFlightTickets
-#    a rdf:Property .
-
-ex:forFlight
-    a rdf:Property .
-
-ex:containsFlights
-    a rdf:Property .
-
-ex:airlineHasManager
-    a rdf:Property .
-
-ex:airportHasManager
-    a rdf:Property .
-
-ex:airportNumberOfEmployees
-    a rdf:Property .
-
-ex:airlineNumberOfEmployees
-    a rdf:Property .
-
-ex:startTime
-    a rdf:Property .
-
-ex:endTime
-    a rdf:Property .
-
-
-#Domain and Ranges - No datatypes
 ex:ticketBookedBy
+    a           rdf:Property ;
     rdfs:domain ex:FlightTicket ;
     rdfs:range  ex:Customer .
 
 ex:tripBookedBy
-    rdfs:domain ex:Trip ;
+    a           rdf:Property ;
+    rdfs:domain ex:FlightTicket ;
     rdfs:range  ex:Customer .
 
-ex:containsFlights
-    rdfs:domain rdf:Trip ;
-    rdfs:range  ex:FlightList .
+ex:seatIdentification
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range  xsd:string .
 
-ex:atAirport
-    rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range  ex:Airport .
+ex:hasCallsign
+    a rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range  xsd:string .
 
-ex:hasStartedOperation
-    rdfs:domain ex:Airline ;
-    rdfs:range  ex:AirlineAirportOperation .
 
 ex:operatesRoute
+    a           rdf:Property ;
     rdfs:domain ex:Flight ;
     rdfs:range  ex:FlightRoute .
 
-ex:operatedBy
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  ex:Airline .
-
-ex:containsTicket
-    rdfs:domain ex:Flight ;
-    rdfs:range  ex:FlightTicket .
-
-ex:hasDeparture
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  ex:Airport .
-
-ex:hasDestination
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  ex:Airport .
-
 ex:necessaryTicket
+    a           rdf:Property ;
     rdfs:domain ex:Flight ;
     rdfs:range  ex:FlightTicket .
 
-
-#Domain and Ranges - xsd:datatypes
-ex:airlineNumberOfEmployees
-    rdfs:domain ex:Airline ;
-    rdfs:range  xsd:integer .
-
-ex:airportNumberOfEmployees
-    rdfs:domain ex:Airport ;
-    rdfs:range  xsd:integer .
+ex:containsFlights
+    a           rdf:Property ;
+    rdfs:domain rdf:Trip ;
+    rdfs:range  ex:FlightList .
 
 ex:airlineHasManager
+    a           rdf:Property ;
     rdfs:domain ex:Airline ;
     rdfs:range  xsd:string .
 
 ex:airportHasManager
+    a           rdf:Property ;
     rdfs:domain ex:Airline ;
     rdfs:range  xsd:string .
 
-ex:inYear
-    rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range  xsd:gYear .
+ex:airportNumberOfEmployees
+    a           rdf:Property ;
+    rdfs:domain ex:Airport ;
+    rdfs:range  xsd:integer .
+
+ex:airlineNumberOfEmployees
+    a           rdf:Property ;
+    rdfs:domain ex:Airline ;
+    rdfs:range  xsd:integer .
 
 ex:foundingYear
+    a           rdf:Property ;
     rdfs:domain ex:Airline ;
     rdfs:range  xsd:gYear .
 
-ex:orderTimestampTrip
-    rdfs:domain ex:Trip ;
-    rdfs:range  xsd:dateTime .
-
-ex:hasPrice
-    rdfs:domain ex:Trip ;
-    rdfs:range  rdf:float .
-
-ex:hasName
-    rdfs:domain ex:Customer ;
-    rdfs:range  xsd:string .
-
-ex:hasPassportNumber
-    rdfs:domain ex:Customer ;
-    rdfs:range  xsd:integer .
-
-ex:hasDepartureTime
-    rdfs:domain ex:Flight ;
-    rdfs:range  xsd:datetime .
-
-ex:hasArivalTime
-    rdfs:domain ex:Flight ;
-    rdfs:range  xsd:datetime .
-
-ex:seatClassification
-    rdfs:domain ex:Flight ;
-    rdfs:range  xsd:string .
-
-ex:seatIdentification
-    rdfs:domain ex:Flight ;
-    rdfs:range  xsd:string .
-
-ex:hasDuration
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  xsd:float .
-
-ex:hasPlaneModel
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  xsd:string .
-
-ex:maxNumberOfPassengers
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  xsd:integer .
-
-ex:hasFlightNumber
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range  xsd:string .
-
 ex:startTime
+    a rdf:Property ;
     rdfs:domain ex:Trip, ex:Flight ;
     rdfs:range  xsd:dateTime .
 
 ex:endTime
+    a rdf:Property ;
     rdfs:domain ex:Trip, ex:Flight ;
     rdfs:range  xsd:dateTime .
 
-
-
-ex:hasCallsign #ToDo Check notwendig?
-               rdfs:domain ex:Flight ;
-               rdfs:range  xsd:string .
-
-
-ex:forFlight #ToDo Check notwendig?
-             rdfs:domain ex:FlightTicket ;
-             rdfs:range  ex:Customer .
-
-
-## --
+ex:hasDepartureTime
+    a           rdf:Property ;
+    rdfs:domain ex:Flight ;
+    rdfs:range  xsd:datetime .
 
 ex:BER
     a                           ex:Airport ;
@@ -320,11 +244,12 @@ ex:LHR_Operation
 
 
 ex:AirTrier
-    a                      ex:Airline ;
-    ex:numberOfEmployees   420 ;
-    ex:hasManager          "CarstenSphor" ;
-    ex:ex:foundingYear     1995 ;
-    ex:hasStartedOperation ex:BER_Operation, ex:JFK_Operation, ex:FCO_Operation, ex:LHR_Operation .
+    a                           ex:Airline ;
+    ex:numberOfEmployees        420 ;
+    ex:hasManager               "CarstenSphor" ;
+    ex:ex:foundingYear          1995 ;
+    ex:hasStartedOperation      ex:BER_Operation, ex:JFK_Operation, ex:FCO_Operation, ex:LHR_Operation ;
+    ex:airlineNumberOfEmployees 2308 .
 
 # -- Alle Routen von Berlin (BER) --
 ex:AT_BER_To_LHR
@@ -475,7 +400,7 @@ ex:Trip1
     ex:endTime            "2024-05-02T00:25:00" ;
     ex:hasPrice           941 ;
     ex:orderTimestampTrip "2024-04-01T19:00:00" ;
-    ex:bookedBy           ex:custumer_1 ;
+    ex:tripBookedBy       ex:custumer_1 ;
     ex:containsFlights    ex:FlightList1 .
 
 ex:FlightList1
@@ -520,22 +445,22 @@ ex:Flight104
 ex:FlightTicket101
     ex:seatIdentification "14C" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_1 .
+    ex:ticketBookedBy     ex:custumer_1 .
 
 ex:FlightTicket102
     ex:seatIdentification "1A" ;
     ex:seatClassification "Business" ;
-    ex:bookedBy           ex:custumer_1 .
+    ex:ticketBookedBy     ex:custumer_1 .
 
 ex:FlightTicket103
     ex:seatIdentification "23H" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_1 .
+    ex:ticketBookedBy     ex:custumer_1 .
 
 ex:FlightTicket104
     ex:seatIdentification "26J" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_1 .
+    ex:ticketBookedBy     ex:custumer_1 .
 
 #Trip2
 ex:Trip1
@@ -544,7 +469,7 @@ ex:Trip1
     ex:endTime            "2024-05-01T22:30:00" ;
     ex:hasPrice           2157 ;
     ex:orderTimestampTrip "2023-12-29T14:00:00" ;
-    ex:bookedBy           ex:custumer_2 ;
+    ex:tripBookedBy       ex:custumer_2 ;
     ex:containsFlights    ex:FlightList2 .
 
 ex:FlightList2
@@ -554,8 +479,7 @@ ex:FlightList2
     rdf:_3 ex:Flight203 ;
     rdf:_4 ex:Flight204 ;
     rdf:_5 ex:Flight205 ;
-    rdf:_6 ex:Flight206 ;
-    rdf:_7 ex:Flight207 .
+    rdf:_6 ex:Flight206 .
 
 ex:Flight201
     a                  ex:Flight ;
@@ -605,48 +529,35 @@ ex:Flight206
     ex:hasArivalTime   "2024-05-02T04:20:00" ;
     ex:necessaryTicket ex:FlightTicket206 .
 
-ex:Flight207
-    a                  ex:Flight ;
-    ex:operatesRoute   ex:AT_LHR_To_JFK ;
-    ex:hasCallsign     "ATLJ3" ;
-    ex:hasDepatureTime "2024-05-02T05:20:00" ;
-    ex:hasArivalTime   "2024-05-02T13:20:00" ;
-    ex:necessaryTicket ex:FlightTicket207 .
-
 ex:FlightTicket201
     ex:seatIdentification "22B" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 ex:FlightTicket202
     ex:seatIdentification "2E" ;
     ex:seatClassification "Business" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 ex:FlightTicket203
     ex:seatIdentification "2A" ;
     ex:seatClassification "Business" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 ex:FlightTicket204
     ex:seatIdentification "10F" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 ex:FlightTicket205
     ex:seatIdentification "24A" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 ex:FlightTicket206
     ex:seatIdentification "27C" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_2 .
-
-ex:FlightTicket207
-    ex:seatIdentification "31B" ;
-    ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_2 .
+    ex:ticketBookedBy     ex:custumer_2 .
 
 #Trip3
 ex:Trip3
@@ -655,7 +566,7 @@ ex:Trip3
     ex:endTime            "2024-05-01T22:30:00" ;
     ex:hasPrice           921 ;
     ex:orderTimestampTrip "2024-04-24T21:00:00" ;
-    ex:bookedBy           ex:custumer_3 ;
+    ex:tripBookedBy       ex:custumer_3 ;
     ex:containsFlights    ex:FlightList3 .
 
 ex:FlightList3
@@ -700,19 +611,19 @@ ex:Flight304
 ex:FlightTicket301
     ex:seatIdentification "31F" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_3 .
+    ex:ticketBookedBy     ex:custumer_3 .
 
 ex:FlightTicket302
     ex:seatIdentification "26D" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_3 .
+    ex:ticketBookedBy     ex:custumer_3 .
 
 ex:FlightTicket303
     ex:seatIdentification "10B" ;
     ex:seatClassification "Economy" ;
-    ex:bookedBy           ex:custumer_3 .
+    ex:ticketBookedBy     ex:custumer_3 .
 
 ex:FlightTicket304
     ex:seatIdentification "3E" ;
     ex:seatClassification "Business" ;
-    ex:bookedBy           ex:custumer_3 .
+    ex:ticketBookedBy     ex:custumer_3 .
