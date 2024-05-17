@@ -202,30 +202,30 @@ ex:hasDepartureTime
     rdfs:range  xsd:datetime .
 
 ex:BER
-    a                           ex:Airport ;
-    ex:airportHasManager        "AlettaVonMassenbach" ;
-    ex:airportNumberOfEmployees 2150 .
+    a                           ex:Airport .
+#    ex:airportHasManager        "AlettaVonMassenbach" ;
+#    ex:airportNumberOfEmployees 2150 .
 
 ex:JFK
-    a                           ex:Airport ;
-    ex:airportHasManager        "RoelHuinink" ;
-    ex:airportNumberOfEmployees 40500 .
+    a                           ex:Airport .
+#    ex:airportHasManager        "RoelHuinink" ;
+#    ex:airportNumberOfEmployees 40500 .
 
 ex:FCO
-    a                           ex:Airport ;
-    ex:airportHasManager        "MarcoTroncone" ;
-    ex:airportNumberOfEmployees 3377 .
+    a                           ex:Airport .
+#    ex:airportHasManager        "MarcoTroncone" ;
+#    ex:airportNumberOfEmployees 3377 .
 
 ex:LHR
-    a                           ex:Airport ;
-    ex:airportHasManager        "ThomasWoldbye" ;
-    ex:airportNumberOfEmployees 6400 .
+    a                           ex:Airport .
+#    ex:airportHasManager        "ThomasWoldbye" ;
+#    ex:airportNumberOfEmployees 6400 .
 
 
 ex:BER_Operation
-    a            ex:AirlineAirportOperation ;
-    ex:atAirport ex:BER ;
-    ex:inYear    2000 .
+    a            ex:AirlineAirportOperation .
+#    ex:atAirport ex:BER ;
+#    ex:inYear    2000 .
 
 ex:JFK_Operation
     a            ex:AirlineAirportOperation ;
@@ -463,7 +463,7 @@ ex:FlightTicket104
     ex:ticketBookedBy     ex:custumer_1 .
 
 #Trip2
-ex:Trip1
+ex:Trip2
     a                     ex:Trip ;
     ex:startTime          "2024-05-01T00:00:00" ;
     ex:endTime            "2024-05-01T22:30:00" ;
@@ -478,8 +478,8 @@ ex:FlightList2
     rdf:_2 ex:Flight202 ;
     rdf:_3 ex:Flight203 ;
     rdf:_4 ex:Flight204 ;
-    rdf:_5 ex:Flight205 ;
-    rdf:_6 ex:Flight206 .
+    rdf:_5 ex:Flight205 .
+#    rdf:_6 ex:Flight206 .
 
 ex:Flight201
     a                  ex:Flight ;
@@ -521,13 +521,13 @@ ex:Flight205
     ex:hasArivalTime   "2024-05-02T00:40:00" ;
     ex:necessaryTicket ex:FlightTicket205 .
 
-ex:Flight206
-    a                  ex:Flight ;
-    ex:operatesRoute   ex:AT_FCO_To_LHR ;
-    ex:hasCallsign     "ATFL3" ;
-    ex:hasDepatureTime "2024-05-02T01:40:00" ;
-    ex:hasArivalTime   "2024-05-02T04:20:00" ;
-    ex:necessaryTicket ex:FlightTicket206 .
+#ex:Flight206
+#    a                  ex:Flight ;
+#    ex:operatesRoute   ex:AT_FCO_To_LHR ;
+#    ex:hasCallsign     "ATFL3" ;
+#    ex:hasDepatureTime "2024-05-02T01:40:00" ;
+#    ex:hasArivalTime   "2024-05-02T04:20:00" ;
+#    ex:necessaryTicket ex:FlightTicket206 .
 
 ex:FlightTicket201
     ex:seatIdentification "22B" ;
@@ -554,10 +554,10 @@ ex:FlightTicket205
     ex:seatClassification "Economy" ;
     ex:ticketBookedBy     ex:custumer_2 .
 
-ex:FlightTicket206
-    ex:seatIdentification "27C" ;
-    ex:seatClassification "Economy" ;
-    ex:ticketBookedBy     ex:custumer_2 .
+#ex:FlightTicket206
+#    ex:seatIdentification "27C" ;
+#    ex:seatClassification "Economy" ;
+#    ex:ticketBookedBy     ex:custumer_2 .
 
 #Trip3
 ex:Trip3
