@@ -36,12 +36,6 @@ ex:FlightTicket
 
 
 #Properties
-ex:numberOfEmployees
-    a rdf:Property .
-
-ex:hasManager
-    a rdf:Property .
-
 ex:inYear
     a           rdf:Property ;
     rdfs:domain ex:AirlineAirportOperation ;
