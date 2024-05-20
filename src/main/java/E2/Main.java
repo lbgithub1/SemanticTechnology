@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Model m = ModelFactory.createDefaultModel()
-                .read("E2.ttl", "TURTLE");
+                .read("E2_copy.ttl", "TURTLE");
         m.write(System.out);
     }
 }
