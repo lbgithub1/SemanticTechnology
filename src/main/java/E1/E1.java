@@ -1,20 +1,28 @@
 package E1;
 
 //necessary imports are inserted
+
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.vocabulary.RDF;
+
+import static org.apache.jena.vocabulary.RDF.uri;
 
 public class E1 {
 
-    //Variables are created so taht the code remains dynamic and clear
-    static String mainNamespace = "http://www.uni-trier.de/index.php?id=1890";
-    static String lectureURI = mainNamespace + "/SemanticTechnologies";
-    static String fnBergmann = mainNamespace + "/RalphBergmann";
+    //Variables are created so that the code remains dynamic and clear
+    //static String mainNamespace = "http://www.uni-trier.de";
+    static String uriOfWebsite = "http://www.uni-trier.de/index.php?id=1890";
+    static String lectureURI = "http://www.uni-trier.de/SemanticTechnologies";
+    static String fnBergmann = "http://www.uni-trier.de/RalphBergmann";
     static String emailBergmann = "mailto:bergmann@uni-trier.de";
-    static String fnHoffmann = mainNamespace + "/MaximilianHoffmann";
+    static String fnHoffmann = "http://www.uni-trier.de/MaximilianHoffmann";
     static String emailHoffmann = "mailto:hoffmann@uni-trier.de";
-    static String creatorURI = mainNamespace + "/creator";
+    static String creatorURI = "http://www.uni-trier.de/creator";
 
 
     public static void main(String[] args) {
@@ -22,8 +30,6 @@ public class E1 {
         //Create the model
         Model model = ModelFactory.createDefaultModel();
 
-        //A (closed) list is created, which represents the three assignments
-        //The list is created at this early stage so that it can be immediately accessed at a later point
         RDFNode[] assignments = new RDFNode[3];
         assignments[0] = model.createLiteral("1.Assignment");
         assignments[1] = model.createLiteral("2.Assignment");
@@ -33,24 +39,27 @@ public class E1 {
         //Resources are created in chronological order, which are linked directly
         //Properties are created immediately and not in a separate location for a fast unterstanding of the code
         Resource creator = model.createResource(creatorURI)
-                .addLiteral(model.createProperty(mainNamespace + "/fullName"), fnBergmann)
-                .addLiteral(model.createProperty(mainNamespace + "/email"), emailBergmann);
+                .addLiteral(model.createProperty("http://www.uni-trier.de/fullName"), fnBergmann)
+                .addLiteral(model.createProperty("http://www.uni-trier.de/email"), emailBergmann);
 
+        Resource tutor = model.createResource("http://www.uni-trier.de/tutor")
+                .addLiteral(model.createProperty( "http://www.uni-trier.de/tutorFullName"), fnHoffmann)
+                .addLiteral(model.createProperty("http://www.uni-trier.de/tutorMail"), emailHoffmann);
 
-        Resource tutor = model.createResource(mainNamespace + "/tutor")
-                .addLiteral(model.createProperty(mainNamespace + "/tutorFullName"), fnHoffmann)
-                .addLiteral(model.createProperty(mainNamespace + "tutorMail"), emailHoffmann);
+        Resource websiteUniTrier = model.createResource(uriOfWebsite)
+                .addProperty(model.createProperty("http://www.uni-trier.de/createdBy"), creator);
 
-        Resource websiteUniTrier = model.createResource(mainNamespace)
-                .addProperty(model.createProperty(mainNamespace + "/createdBy"), creator);
+//        Resource websiteUniTrier = model.createResource()
+//                .addProperty(RDF.uri, model.createResource(uriOfWebsite))
+//                .addProperty(model.createProperty(mainNamespace + "/createdBy"), creator);
 
-        Resource exercise = model.createResource(mainNamespace + "/exercise")
-                .addProperty(model.createProperty(mainNamespace + "/consistsOf"), listOfAssignments)
-                .addProperty(model.createProperty(mainNamespace + "/hasTutor"), tutor);
+        Resource exercise = model.createResource("http://www.uni-trier.de/exercise")
+                .addProperty(model.createProperty("http://www.uni-trier.de/consistsOf"), listOfAssignments)
+                .addProperty(model.createProperty("http://www.uni-trier.de/hasTutor"), tutor);
 
         Resource lecture = model.createResource(lectureURI)
-                .addProperty(model.createProperty(mainNamespace + "/isHeldBy"), creator)
-                .addProperty(model.createProperty(mainNamespace + "/hasExercise"), exercise);
+                .addProperty(model.createProperty("http://www.uni-trier.de/isHeldBy"), creator)
+                .addProperty(model.createProperty("http://www.uni-trier.de/hasExercise"), exercise);
 
         //Writing the model to the console
         RDFDataMgr.write(System.out, model, Lang.RDFXML);
