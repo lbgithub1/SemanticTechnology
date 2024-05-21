@@ -4,6 +4,7 @@
 
 # ANNAHMEN
 # - Der Zeitstempel eines Trips wird als Buchungszeitpunkt verstanden
+# - Der Trip startet mit dem Startzeitpunkt des ersten Flugs und endet mit der Ankunftszeit des letzten Flugs
 # - Es existieren keine Zeitzonen, alle Zeiten (Order-, Start-, sowie Landezeiten) sind in UTC angegeben
 
 @prefix ex: <http://airtrier.de/> .
@@ -165,7 +166,7 @@ ex:FlightTicket
 ex:forFlight
     a rdf:Property ;
     rdfs:domain ex:FlightTicket ;
-    rdfs:range ex:Customer ;
+    rdfs:range ex:FlightRoute ;
     rdfs:comment "Property to assign a flight to a flight ticket" .
 
 ex:seatClassification
@@ -223,17 +224,17 @@ ex:LHR a ex:Airport .
 ex:BER_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:BER ;
-    ex:inYear 2020 .
+    ex:inYear 2015 .
 
 ex:JFK_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:JFK ;
-    ex:inYear 2000 .
+    ex:inYear 1995 .
 
 ex:FCO_Operation
     a ex:AirlineAirportOperation ;
     ex:atAirport ex:FCO ;
-    ex:inYear 2000 .
+    ex:inYear 2004 .
 
 ex:LHR_Operation
     a ex:AirlineAirportOperation ;
@@ -395,6 +396,36 @@ ex:AT_LHR_To_BER_1
     ex:hasDepatureTime "2024-05-01T02:30:00" ;
     ex:hasArrivalTime "2024-05-01T04:30:00" .
 
+ex:AT_BER_To_FCO_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_FCO ;
+    ex:hasCallsign "ATBF1" ;
+    ex:hasDepatureTime "2024-05-01T05:00:00" ;
+    ex:hasArrivalTime "2024-05-01T07:10:00" . # 2h10min?
+
+ex:AT_BER_To_FCO_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_FCO ;
+    ex:hasCallsign "ATBF1" ;
+    ex:hasDepatureTime "2024-05-01T05:00:00" ;
+    ex:hasArrivalTime "2024-05-01T07:40:00" . # 2h10min?
+
+ex:AT_BER_To_JFK_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_BER_To_JFK ;
+    ex:hasCallsign "ATBJ1" ;
+    ex:hasDepatureTime "2024-05-01T13:00:00" ;
+    ex:hasArrivalTime "2024-05-01T21:40:00" .
+
+ex:AT_JFK_To_BER_1
+    a ex:Flight ;
+    ex:operatesRoute ex:AT_JFK_To_BER ;
+    ex:hasCallsign "ATJB1" ;
+    ex:hasDepatureTime "2024-05-02T12:00:00" ;
+    ex:hasArrivalTime "2024-05-02T19:40:00" .
+
+
+
 ex:AT_LHR_To_FCO_1
     a ex:Flight ;
     ex:operatesRoute ex:AT_LHR_To_FCO ;
@@ -409,12 +440,7 @@ ex:AT_LHR_To_JFK_1
     ex:hasDepatureTime "2024-05-01T03:30:00" ;
     ex:hasArrivalTime "2024-05-01T11:30:00" .
 
-ex:AT_BER_To_FCO_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_FCO ;
-    ex:hasCallsign "ATBF1" ;
-    ex:hasDepatureTime "2024-05-01T05:00:00" ;
-    ex:hasArrivalTime "2024-05-01T07:40:00" .
+
 
 ex:AT_FCO_To_JFK_1
     a ex:Flight ;
@@ -430,12 +456,7 @@ ex:AT_FCO_To_BER_1
     ex:hasDepatureTime "2024-05-01T08:20:00" ;
     ex:hasArrivalTime "2024-05-01T10:30:00" .
 
-ex:AT_BER_To_JFK_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_JFK ;
-    ex:hasCallsign "ATBJ1" ;
-    ex:hasDepatureTime "2024-05-01T13:00:00" ;
-    ex:hasArrivalTime "2024-05-01T21:40:00" .
+
 
 ex:AT_JFK_To_FCO_1
     a ex:Flight ;
@@ -444,12 +465,7 @@ ex:AT_JFK_To_FCO_1
     ex:hasDepatureTime "2024-05-02T03:00:00" ;
     ex:hasArrivalTime "2024-05-02T11:30:00" .
 
-ex:AT_JFK_To_BER_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_JFK_To_BER ;
-    ex:hasCallsign "ATJB1" ;
-    ex:hasDepatureTime "2024-05-02T12:00:00" ;
-    ex:hasArrivalTime "2024-05-02T19:40:00" .
+
 
 ex:AT_FCO_To_BER_2
     a ex:Flight ;
@@ -462,7 +478,14 @@ ex:AT_FCO_To_BER_2
 ex:customer_1
     a ex:Customer ;
     ex:hasName "Alfred Albrecht" ;
-    ex:hasPassportNumber 1 .
+    ex:hasPassportNumber 12345678 .
+
+ex:TripCustumer1
+    a ex:Trip ;
+    ex:hasPrice 1000 ;
+    ex:hasTimestamp "2024-01-01T12:00:00" ;
+    ex:bookedBy ex:customer_1 ;
+    ex:containsFlightTickets ex:Ticket_Seq_Customer1 .
 
 ex:FlightTicket_c1_1
     a ex:FlightTicket ;
@@ -494,7 +517,7 @@ ex:FlightTicket_c1_5
     ex:seatClassification "Business" ;
     ex:seatIdentification "4D" .
 
-ex:FlightTicket_c1_5
+ex:FlightTicket_c1_6
     a ex:FlightTicket ;
     ex:forFlight ex:AT_JFK_To_BER_1 ;
     ex:seatClassification "Business" ;
@@ -510,30 +533,25 @@ ex:Ticket_Seq_Customer1
     rdf:_5 ex:FlightTicket_c1_5 ;
     rdf:_6 ex:FlightTicket_c1_6 .
 
-ex:TripCostumer1
-    a ex:Trip ;
-    ex:hasPrice 1000 ;
-    ex:hasTimestamp "2024-01-01T12:00:00" ;
-    ex:bookedBy ex:customer_1 ;
-    ex:containsFlightTickets ex:Ticket_Seq_Customer1 .
+
 
 
 ex:customer_2
     a ex:Customer ;
     ex:hasName "Berndt Brandt" ;
-    ex:hasPassportNumber 2 .
+    ex:hasPassportNumber 10111213 .
 
 ex:FlightTicket_c2_1
     a ex:FlightTicket ;
     ex:forFlight ex:AT_BER_To_LHR_1 ;
-    ex:seatClassification "Business" ;
-    ex:seatIdentification "1B" .
+    ex:seatClassification "Economy" ;
+    ex:seatIdentification "26J" .
 
 ex:FlightTicket_c2_2
     a ex:FlightTicket ;
     ex:forFlight ex:AT_LHR_To_FCO_1 ;
-    ex:seatClassification "Business" ;
-    ex:seatIdentification "3D" .
+    ex:seatClassification "Econmy" ;
+    ex:seatIdentification "23H" .
 
 ex:FlightTicket_c2_3
     a ex:FlightTicket ;
@@ -544,8 +562,8 @@ ex:FlightTicket_c2_3
 ex:FlightTicket_c2_4
     a ex:FlightTicket ;
     ex:forFlight ex:AT_JFK_To_BER_1 ;
-    ex:seatClassification "Business" ;
-    ex:seatIdentification "2E" .
+    ex:seatClassification "Economy" ;
+    ex:seatIdentification "14C" .
 
 ex:Ticket_Seq_Customer2
     a rdf:Seq ;
@@ -564,7 +582,7 @@ ex:TripCostumer2
 ex:customer_3
     a ex:Customer ;
     ex:hasName "Christoph Conrad" ;
-    ex:hasPassportNumber 3 .
+    ex:hasPassportNumber 1415161 .
 
 ex:FlightTicket_c3_1
     a ex:FlightTicket ;
