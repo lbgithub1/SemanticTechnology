@@ -7,6 +7,7 @@
 # - Der Trip startet mit dem Startzeitpunkt des ersten Flugs und endet mit der Ankunftszeit des letzten Flugs.
 # - Es existieren keine Zeitzonen, alle Zeiten (Order-, Start-, sowie Landezeiten) sind in UTC angegeben.
 # - Flüge können in den Trips wiederverwendet werden, bsp: alle Trips starten mit dem Flug "ex:AT_BER_To_LHR_1", damit sichergestellt werden kann, dass wie aus der Aufgabenstellung gefordert die Trips am 01.05. starten. Danach unterscheiden sich die Trips im weiteren Verlauf.
+# - Kommentare sind sowohl im Graph als auch in der Datei vorhanden.
 
 @prefix ex:   <http://airtrier.de/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,227 +15,234 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 ## Erstellung des Schemas
-
-## -- Definition der Klasse Airport --
+# Der Aufbau der Datei zielt darauf ab, eine bestmögliche Übersicht zu gewährleisten, weshalb die zugehörigen Properties einer Klasse direkt nach der Definition spezifiziert werden.
+## -- Definition der Klasse Airport und alle erforderlichen Eigenschaften --
 ex:Airport
-    a            rdfs:Class ; # Schlüsselwort "a" ist syntaktischer Zucker für "rdf:type"
-    rdfs:comment "Class with which an airport can be described" .
+    a            rdfs:Class ; # Schlüsselwort "a" ist syntaktischer Zucker für "rdf:type" und verkürzt den Code
+    rdfs:comment "Klasse mit welcher der Airport beschrieben wird." .
 
 ex:airportHasManager
     a           rdf:Property ;
     rdfs:domain ex:Airport ;
-    rdfs:range  xsd:string .
+    rdfs:range  xsd:string ;
+    rdfs:comment
+            "Eigenschaft, welche einen Flughafenmanager zuweist." .
 
 ex:airportNumberOfEmployees
     a           rdf:Property ;
     rdfs:domain ex:Airport ;
-    rdfs:range  xsd:integer .
+    rdfs:range  xsd:integer ;
+    rdfs:comment
+            "Eigenschaft, welche die Beschäftigten eines Flughafens deklariert." .
+
 
 ## -- Definition der Klasse AirlineAirportOperation sowie allen dazugehörigen Eigenschaften --
 ex:AirlineAirportOperation
     a rdfs:Class ;
     rdfs:comment
-      "Class, with whose instantiations the tenary relationship when an airline has started flight operations at an airport " .
+      "Klasse, welche die tenäre Beziehung darstellt, ab welchem Jahr eine Fluggesellschaft den Flugbetrieb an dem entsprechenden Flughafen aufgenommen hat." .
 
 ex:atAirport
     a            rdf:Property ;
     rdfs:domain  ex:AirlineAirportOperation ;
     rdfs:range   ex:Airport ;
-    rdfs:comment "Property with which an airport can be assigned to relationship AirlineAirportOperation" .
+    rdfs:comment "Eigenschaft, mit der ein Flughafen der Beziehung AirlineAirportOperation zugeordnet werden kann." .
 
 ex:inYear
     a            rdf:Property ;
     rdfs:domain  ex:AirlineAirportOperation ;
     rdfs:range   xsd:gYear ; # "gYear represents a gregorian calendar year." -> see https://www.w3.org/TR/xmlschema-2/#gYear
-    rdfs:comment "Property with which a year can be assigned to relationship AirlineAirportOperation" .
+    rdfs:comment "Eigenschaft mit der das entsprechende Jahr der Beziehung AirlineOperation vergeben werden kann." .
 
 
 ## -- Definition der Klasse Airline sowie allen dazugehörigen Eigenschaften --
 ex:Airline
     a            rdfs:Class ;
-    rdfs:comment "Class with which an airline can be described" .
+    rdfs:comment "Klasse mit der eine Fluglinie beschrieben wird." .
 
 ex:airlineNumberOfEmployees
     a            rdf:Property ;
     rdfs:domain  ex:Airline ;
     rdfs:range   xsd:integer ;
-    rdfs:comment "Property used to describe how many employees are employed by an airline" .
+    rdfs:comment "Eigenschaft gibt die Mitarbeiterzahl einer Fluggesellschaft an." .
 
 ex:airlineHasManager
     a            rdf:Property ;
     rdfs:domain  ex:Airline ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property to name the manager of an airline" .
+    rdfs:comment "Eigenschaft für den Namen des Managers der Fluggesellschaft." .
 
 ex:hasStartedOperation
     a            rdf:Property ;
     rdfs:domain  ex:Airline ;
     rdfs:range   ex:AirlineAirportOperation ;
-    rdfs:comment "Property to show when the airline started operations at a particular airport" .
+    rdfs:comment "Eigenschaft gibt an, seid wann ein Flughafen von der Fluggesellschaft angeflogen wird." .
 
 
 ## -- Definition der Klasse FlightRoute sowie allen dazugehörigen Eigenschaften --
 ex:FlightRoute
     a            rdfs:Class ;
-    rdfs:comment "Class that describes a flight route" .
+    rdfs:comment "Klasse welche die einzelnen Flugrouten beschreibt" .
 
 ex:operatedBy
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   ex:Airline ;
-    rdfs:comment "Property with which an operating airline can be assigned to a FlightRoute" .
+    rdfs:comment "Mit der Eigenschaft wird die verantwortliche/ operative Fluggesellschaft für die Route angegeben." .
 
 ex:hasFlightNumber
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property with which a flight route can be assigned a unique ID (= FlightNumber)" .
+    rdfs:comment "Hierdurch wird eine eindeutige ID (=Flugnummer) der Route vergeben." .
 
 ex:hasDeparture
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   ex:Airport ;
-    rdfs:comment "Property to assign a depature airport to a flight route" .
+    rdfs:comment "Die Eigenschaft gibt an, von welchem Flughafen abgeflogen wird." .
 
 ex:hasDestination
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   ex:Airport ;
-    rdfs:comment "Property to assign a destination airport to a flight route" .
+    rdfs:comment "Eigenschaft, welche den Zielflughafen der Route angibt." .
 
 ex:hasDuration
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   xsd:float ; # Data type xsd:duration could also be used, but is neglected due to the more complex notation
-    rdfs:comment "Property to assign a flight time to a flight route" .
+    rdfs:comment "Flugdauer" .
 
 ex:hasPlaneModel
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property for assigning a aircraft model to a flight route" .
+    rdfs:comment "Dadurch wird das entsprechende Flugzeugmodell der Route zugewiesen." .
 
 ex:maxNumberOfPassengers
     a            rdf:Property ;
     rdfs:domain  ex:FlightRoute ;
     rdfs:range   xsd:integer ;
-    rdfs:comment "Property to assign a maximum passenger capacity to a flight route" .
+    rdfs:comment "Die Eigenschaft legt die maximale Passagierzahl für die Route fest." .
 
 
 ## -- Definition der Klasse Flight sowie allen dazugehörigen Eigenschaften --
 ex:Flight
     a            rdfs:Class ;
-    rdfs:comment "Class to describe a specific flight" .
+    rdfs:comment "Klasse, welche die einzelnen Flüge beschreibt." .
 
 ex:operatesRoute
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   ex:FlightRoute ;
-    rdfs:comment "Property to assign a route to a flight" .
+    rdfs:comment "Die Eigenschaft weist einem Flug eine entsprechende Route zu." .
 
 ex:hasCallsign
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property to assign a unique ID (=callsign) to a flight" .
+    rdfs:comment "Eigenschaft, welche dem Flug eine eindeutige ID (=Rufzeichen) zuweist." .
 
 ex:hasDepatureTime
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   xsd:dateTime ;
-    rdfs:comment "Property to assign a departure time to a flight" .
+    rdfs:comment "Hierdurch wird die Ablfugzeit beschrieben." .
 
 ex:hasArrivalTime
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   xsd:dateTime ;
-    rdfs:comment "Property to assign an arrival time to a flight" .
+    rdfs:comment "Damit wird die Ankunftszeit festgelegt" .
 
 
 ## -- Definition der Klasse Customer sowie allen dazugehörigen Eigenschaften --
 ex:Customer
     a            rdfs:Class ;
-    rdfs:comment "Class to describe a customer" .
+    rdfs:comment "Klasse, welche die Kunden beschreibt, welche einen Trip buchen." .
 
 ex:hasName
     a            rdf:Property ;
     rdfs:domain  ex:Customer ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property to assign a name to a customer" .
+    rdfs:comment "Eigenschaft, weist dem Kunden einen Namen zu." .
 
 ex:hasPassportNumber
     a            rdf:Property ;
     rdfs:domain  ex:Customer ;
     rdfs:range   xsd:integer ;
-    rdfs:comment "Property to assign a Passport Number to a customer" .
+    rdfs:comment "Dadurch wird dem Kunden eine Resisepassnummer vergeben." .
 
 
 ## -- Definition der Klasse FlightTicket sowie allen dazugehörigen Eigenschaften --
 ex:FlightTicket
     a            rdfs:Class ;
-    rdfs:comment "Class to describe a flight ticket" .
+    rdfs:comment "Klasse, welche das Flugticket beschreibt" .
 
 ex:forFlight
     a            rdf:Property ;
     rdfs:domain  ex:FlightTicket ;
     rdfs:range   ex:FlightRoute ;
-    rdfs:comment "Property to assign a flight to a flight ticket" .
+    rdfs:comment "Hiermit wird der entsprechende Flug dem Ticket zugewiesen." .
 
 ex:seatClassification
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property to assign a seat classification (economy or business) to a flight ticket" .
+    rdfs:comment "Die Sitzklassifikation wird durch die Eigenschaft festgelegt (Economy oder Business)." .
 
 ex:seatIdentification
     a            rdf:Property ;
     rdfs:domain  ex:Flight ;
     rdfs:range   xsd:string ;
-    rdfs:comment "Property to assign a unique seat number to a flight ticket" .
+    rdfs:comment "Eigenschaft, welche den Sitzplatz im Flugzeug identifiziert." .
 
 
 ## -- Definition der Klasse Trip sowie allen dazugehörigen Eigenschaften --
 ex:Trip
     a            rdfs:Class ;
-    rdfs:comment "" .
+    rdfs:comment "Klasse, welche den Trip beschreibt." .
 
 ex:containsFlightTickets
     a            rdf:Property ;
     rdfs:domain  ex:Trip ;
     rdfs:range   rdf:Seq ;
-    rdfs:comment "Class to describe a trip" .
+    rdfs:comment "Sequenz, welche die Anzahl der Flugtickets beinhaltet." .
 
 ex:hasPrice
     a            rdf:Property ;
     rdfs:domain  ex:Trip ;
     rdfs:range   xsd:float ;
-    rdfs:comment "Property to assign a sequence (of flight tickets) to a trip" .
+    rdfs:comment "Eigenschaft, welchen den Preis für den gesamten Trip angibt." .
 
 ex:orderTimestampTrip
     a            rdf:Property ;
     rdfs:domain  ex:Trip ;
     rdfs:range   xsd:dateTime ;
-    rdfs:comment "Property to assign a price to a trip" .
+    rdfs:comment "Die Eigenschaft gibt den Buchungszeitpunkt des Trips an, welcher sich vor dem Startzeitpunkt des Trips befindet." .
 
 ex:bookedBy
     a            rdf:Property ;
     rdfs:domain  ex:Trip ;
     rdfs:range   ex:Customer ;
-    rdfs:comment "Property to assign a trip to a customer who has booked this trip" .
+    rdfs:comment "Eigenschaft, welche den Trip einem bestimmten Kunden zuweist." .
 
 ex:startTimeTrip
     a           rdf:Property ;
     rdfs:domain ex:Trip, ex:Flight ;
-    rdfs:range  xsd:dateTime .
+    rdfs:range  xsd:dateTime ;
+    rdfs:comment "Hierdurch wird der Startzeitpunkt des Trips gekennzeichnet." .
 
 ex:endTimeTrip
     a           rdf:Property ;
     rdfs:domain ex:Trip, ex:Flight ;
-    rdfs:range  xsd:dateTime .
+    rdfs:range  xsd:dateTime ;
+    rdfs:comment "Die Eigenschaft gibt den Endzeitpunkt des Trips an." .
 
 ex:Ticket_Seq_Customer
     a rdfs:Container ;
-    rdfs:comment "Für die Anzahl an Tickets zuzuordnen wir das Konstrukt des Containers verwendet, genauer gesagt eine Sequenz 1. Die Elemente sind geordnet - notwendig wegen den Flügen 2. Die Anzahl kann beliebig erweitert werden" .
+    rdfs:comment "Für die Anzahl an Tickets zuzuordnen wird das Konstrukt des Containers verwendet, genauer gesagt eine Sequenz 1. Die Elemente sind geordnet - notwendig wegen den Flügen 2. Die Anzahl kann beliebig erweitert werden" .
 
 
 ## -- Instanziierung
@@ -290,7 +298,7 @@ ex:AirTrier
 
 # Es werden alle möglichen Flugrouten dargestellt
 # Hierbei wird jede Verbindung also von Berlin nach London und von London nach Berlin modelliert, damit die Semantik intuitiver und detaillierter ist
-# Die "hasFlightNumber" setzt sich aus den folgenden Bestandteilen zusammen 1. dem Kürzel "AT" 2. dem Flughafen, hier im ersten Beispiel steht 01 für Berlin als erster Flughafen und 02 London als zweiter Flughafen,
+# Die "hasFlightNumber" setzt sich aus den folgenden Bestandteilen zusammen 1. dem Kürzel "AT" 2. dem Flughafen, hier im ersten Beispiel steht 01 für Berlin als erster Flughafen und 02 London als zweiter Flughafen
 # -- Alle Flugrouten von Berlin (BER) --
 ex:AT_BER_To_LHR
     a                        ex:FlightRoute ;
@@ -501,7 +509,7 @@ ex:AT_FCO_To_BER_2
     ex:hasArrivalTime  "2024-05-02T16:30:00" .
 
 # -- Definition der Kunden sowie deren gebuchten Trips und damit auch FLugtickets --
-# Reihenfolge 1. Customer 2. Trip 3. Flugticket 4. Seqeunz der Tickets
+# Reihenfolge 1.Customer 2.Trip 3.Flugticket 4.Seqeunz der Tickets
 ex:customer_1
     a                    ex:Customer ;
     ex:hasName           "Alfred Albrecht" ;
@@ -517,7 +525,7 @@ ex:TripCustumer1
     ex:bookedBy              ex:customer_1 ;
     ex:containsFlightTickets ex:Ticket_Seq_Customer1 .
 
-# Bei den Flugtickets wird nicht erneut der Kundenname verwendet, um erhöhte Redundanz zu vermeiden und da in der Aufgabenstellung beschrieben wird, dass der Kunde einen Trip bucht, weshalb der Kundenname nur bei Trip zugewiesen wird
+# Bei den Flugtickets wird nicht erneut der Kundenname verwendet, um erhöhte Redundanz zu vermeiden und da in der Aufgabenstellung beschrieben wird, dass der Kunde einen Trip bucht, wird der Kundenname nur beim Trip zugewiesen
 ex:FlightTicket_c1_1
     a                     ex:FlightTicket ;
     ex:forFlight          ex:AT_BER_To_LHR_1 ;
