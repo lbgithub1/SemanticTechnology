@@ -503,7 +503,7 @@ ex:AT_JFK_To_FCO_1
 
 ex:AT_FCO_To_BER_2
     a                  ex:Flight ;
-    ex:operatesRoute   ex:AT_JFK_To_BER ;
+    ex:operatesRoute   ex:AT_FCO_To_BER ;
     ex:hasCallsign     "ATFB2" ;
     ex:hasDepatureTime "2024-05-02T14:20:00" ;
     ex:hasArrivalTime  "2024-05-02T16:30:00" .
@@ -629,9 +629,9 @@ ex:customer_3
 ex:TripCustumer3
     a                        ex:Trip ;
     ex:hasPrice              800 ;
-    ex:orderTimestampTrip    "2024-04-12T12:00:00" ;
+    ex:orderTimestampTrip    "2024-04-12T15:00:00" ;
     ex:startTimeTrip         "2024-05-01T00:00:00" ;
-    ex:endTimeTrip           "2024-05-02T00:25:00" ;
+    ex:endTimeTrip           "2024-05-02T16:30:00" ;
     ex:bookedBy              ex:customer_3 ;
     ex:containsFlightTickets ex:Ticket_Seq_Customer3 .
 
