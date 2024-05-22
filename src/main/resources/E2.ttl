@@ -7,525 +7,548 @@
 # - Der Trip startet mit dem Startzeitpunkt des ersten Flugs und endet mit der Ankunftszeit des letzten Flugs
 # - Es existieren keine Zeitzonen, alle Zeiten (Order-, Start-, sowie Landezeiten) sind in UTC angegeben
 
-@prefix ex: <http://airtrier.de/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex:   <http://airtrier.de/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 ## Erstellung des Schemas
 
 ## -- Definition der Klasse Airport --
 ex:Airport
-    a rdfs:Class ; # Schlüsselwort "a" ist syntaktischer Zucker für "rdf:type"
+    a            rdfs:Class ; # Schlüsselwort "a" ist syntaktischer Zucker für "rdf:type"
     rdfs:comment "Class with which an airport can be described" .
 
+ex:airportHasManager
+    a           rdf:Property ;
+    rdfs:domain ex:Airport ;
+    rdfs:range  xsd:string .
+
+ex:airportNumberOfEmployees
+    a           rdf:Property ;
+    rdfs:domain ex:Airport ;
+    rdfs:range  xsd:integer .
 
 ## -- Definition der Klasse AirlineAirportOperation sowie allen dazugehörigen Eigenschaften --
 ex:AirlineAirportOperation
     a rdfs:Class ;
-    rdfs:comment "Class, with whose instantiations the tenary relationship when an airline has started flight operations at an airport " .
+    rdfs:comment
+      "Class, with whose instantiations the tenary relationship when an airline has started flight operations at an airport " .
 
 ex:atAirport
-    a rdf:Property ;
-    rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range ex:Airport ;
+    a            rdf:Property ;
+    rdfs:domain  ex:AirlineAirportOperation ;
+    rdfs:range   ex:Airport ;
     rdfs:comment "Property with which an airport can be assigned to relationship AirlineAirportOperation" .
 
 ex:inYear
-    a rdf:Property ;
-    rdfs:domain ex:AirlineAirportOperation ;
-    rdfs:range xsd:gYear ; # "gYear represents a gregorian calendar year." -> see https://www.w3.org/TR/xmlschema-2/#gYear
+    a            rdf:Property ;
+    rdfs:domain  ex:AirlineAirportOperation ;
+    rdfs:range   xsd:gYear ; # "gYear represents a gregorian calendar year." -> see https://www.w3.org/TR/xmlschema-2/#gYear
     rdfs:comment "Property with which a year can be assigned to relationship AirlineAirportOperation" .
 
 
 ## -- Definition der Klasse Airline sowie allen dazugehörigen Eigenschaften --
 ex:Airline
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "Class with which an airline can be described" .
 
 ex:numberOfEmployees
-    a rdf:Property ;
-    rdfs:domain ex:Airline ;
-    rdfs:range xsd:integer ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Airline ;
+    rdfs:range   xsd:integer ;
     rdfs:comment "Property used to describe how many employees are employed by an airline" .
 
 ex:hasManager
-    a rdf:Property ;
-    rdfs:domain ex:Airline ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Airline ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property to name the manager of an airline" .
 
 ex:hasStartedOperation
-    a rdf:Property ;
-    rdfs:domain ex:Airline ;
-    rdfs:range ex:AirlineAirportOperation ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Airline ;
+    rdfs:range   ex:AirlineAirportOperation ;
     rdfs:comment "Property to show when the airline started operations at a particular airport" .
 
 
 ## -- Definition der Klasse FlightRoute sowie allen dazugehörigen Eigenschaften --
 ex:FlightRoute
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "Class that describes a flight route" .
 
 ex:operatedBy
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airline ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   ex:Airline ;
     rdfs:comment "Property with which an operating airline can be assigned to a FlightRoute" .
 
 ex:hasFlightNumber
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property with which a flight route can be assigned a unique ID (= FlightNumber)" .
 
 ex:hasDeparture
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airport ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   ex:Airport ;
     rdfs:comment "Property to assign a depature airport to a flight route" .
 
 ex:hasDestination
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range ex:Airport ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   ex:Airport ;
     rdfs:comment "Property to assign a destination airport to a flight route" .
 
 ex:hasDuration
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:float ; # Data type xsd:duration could also be used, but is neglected due to the more complex notation
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   xsd:float ; # Data type xsd:duration could also be used, but is neglected due to the more complex notation
     rdfs:comment "Property to assign a flight time to a flight route" .
 
 ex:hasPlaneModel
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property for assigning a aircraft model to a flight route" .
 
 ex:maxNumberOfPassengers
-    a rdf:Property ;
-    rdfs:domain ex:FlightRoute ;
-    rdfs:range xsd:integer ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightRoute ;
+    rdfs:range   xsd:integer ;
     rdfs:comment "Property to assign a maximum passenger capacity to a flight route" .
 
 
 ## -- Definition der Klasse Flight sowie allen dazugehörigen Eigenschaften --
 ex:Flight
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "Class to describe a specific flight" .
 
 ex:operatesRoute
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range ex:FlightRoute ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   ex:FlightRoute ;
     rdfs:comment "Property to assign a route to a flight" .
 
 ex:hasCallsign
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property to assign a unique ID (=callsign) to a flight" .
 
 ex:hasDepatureTime
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range xsd:dateTime ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   xsd:dateTime ;
     rdfs:comment "Property to assign a departure time to a flight" .
 
 ex:hasArrivalTime
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range xsd:dateTime ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   xsd:dateTime ;
     rdfs:comment "Property to assign an arrival time to a flight" .
 
 
 ## -- Definition der Klasse Customer sowie allen dazugehörigen Eigenschaften --
 ex:Customer
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "Class to describe a customer" .
 
 ex:hasName
-    a rdf:Property ;
-    rdfs:domain ex:Customer ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Customer ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property to assign a name to a customer" .
 
 ex:hasPassportNumber
-    a rdf:Property ;
-    rdfs:domain ex:Customer ;
-    rdfs:range xsd:integer ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Customer ;
+    rdfs:range   xsd:integer ;
     rdfs:comment "Property to assign a Passport Number to a customer" .
 
 
 ## -- Definition der Klasse FlightTicket sowie allen dazugehörigen Eigenschaften --
 ex:FlightTicket
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "Class to describe a flight ticket" .
 
 ex:forFlight
-    a rdf:Property ;
-    rdfs:domain ex:FlightTicket ;
-    rdfs:range ex:FlightRoute ;
+    a            rdf:Property ;
+    rdfs:domain  ex:FlightTicket ;
+    rdfs:range   ex:FlightRoute ;
     rdfs:comment "Property to assign a flight to a flight ticket" .
 
 ex:seatClassification
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property to assign a seat classification (economy or business) to a flight ticket" .
 
 ex:seatIdentification
-    a rdf:Property ;
-    rdfs:domain ex:Flight ;
-    rdfs:range xsd:string ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Flight ;
+    rdfs:range   xsd:string ;
     rdfs:comment "Property to assign a unique seat number to a flight ticket" .
 
 
 ## -- Definition der Klasse Trip sowie allen dazugehörigen Eigenschaften --
 ex:Trip
-    a rdfs:Class ;
+    a            rdfs:Class ;
     rdfs:comment "" .
 
 ex:containsFlightTickets
-    a rdf:Property ;
-    rdfs:domain ex:Trip ;
-    rdfs:range rdf:Seq ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Trip ;
+    rdfs:range   rdf:Seq ;
     rdfs:comment "Class to describe a trip" .
 
 ex:hasPrice
-    a rdf:Property ;
-    rdfs:domain ex:Trip ;
-    rdfs:range xsd:float ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Trip ;
+    rdfs:range   xsd:float ;
     rdfs:comment "Property to assign a sequence (of flight tickets) to a trip" .
 
-ex:hasTimestamp
-    a rdf:Property ;
-    rdfs:domain ex:Trip ;
-    rdfs:range xsd:dateTime ;
+ex:orderTimestampTrip
+    a            rdf:Property ;
+    rdfs:domain  ex:Trip ;
+    rdfs:range   xsd:dateTime ;
     rdfs:comment "Property to assign a price to a trip" .
 
 ex:bookedBy
-    a rdf:Property ;
-    rdfs:domain ex:Trip ;
-    rdfs:range ex:Customer ;
+    a            rdf:Property ;
+    rdfs:domain  ex:Trip ;
+    rdfs:range   ex:Customer ;
     rdfs:comment "Property to assign a trip to a customer who has booked this trip" .
 
+ex:startTimeTrip
+    a           rdf:Property ;
+    rdfs:domain ex:Trip, ex:Flight ;
+    rdfs:range  xsd:dateTime .
+
+ex:endTimeTrip
+    a           rdf:Property ;
+    rdfs:domain ex:Trip, ex:Flight ;
+    rdfs:range  xsd:dateTime .
+
+ex:Ticket_Seq_Customer
+    a rdfs:Container .
 
 
 ## -- Instanziierung
 
-ex:BER a ex:Airport .
-ex:JFK a ex:Airport .
-ex:FCO a ex:Airport .
-ex:LHR a ex:Airport .
+ex:BER
+    a                           ex:Airport ;
+    ex:airportHasManager        "Aletta von Massenbach" ;
+    ex:airportNumberOfEmployees 2150 .
+
+ex:JFK
+    a                           ex:Airport ;
+    ex:airportHasManager        "Roel Huinink" ;
+    ex:airportNumberOfEmployees 40500 .
+
+ex:FCO
+    a                           ex:Airport ;
+    ex:airportHasManager        "Marco Troncone" ;
+    ex:airportNumberOfEmployees 3377 .
+
+ex:LHR
+    a                           ex:Airport ;
+    ex:airportHasManager        "Thomas Woldbye" ;
+    ex:airportNumberOfEmployees 6400 .
 
 
 ex:BER_Operation
-    a ex:AirlineAirportOperation ;
+    a            ex:AirlineAirportOperation ;
     ex:atAirport ex:BER ;
-    ex:inYear 2015 .
+    ex:inYear    2015 .
 
 ex:JFK_Operation
-    a ex:AirlineAirportOperation ;
+    a            ex:AirlineAirportOperation ;
     ex:atAirport ex:JFK ;
-    ex:inYear 1995 .
+    ex:inYear    1995 .
 
 ex:FCO_Operation
-    a ex:AirlineAirportOperation ;
+    a            ex:AirlineAirportOperation ;
     ex:atAirport ex:FCO ;
-    ex:inYear 2004 .
+    ex:inYear    2004 .
 
 ex:LHR_Operation
-    a ex:AirlineAirportOperation ;
+    a            ex:AirlineAirportOperation ;
     ex:atAirport ex:LHR ;
-    ex:inYear 2001 .
+    ex:inYear    2001 .
 
 
 ex:AirTrier
-    a ex:Airline ;
-    ex:numberOfEmployees 420 ;
-    ex:hasManager "CarstenSphor" ;
-    ex:hasStartedOperation
-        ex:BER_Operation ,
-        ex:JFK_Operation,
-        ex:FCO_Operation,
-        ex:LHR_Operation.
+    a                      ex:Airline ;
+    ex:numberOfEmployees   420 ;
+    ex:hasManager          "CarstenSphor" ;
+    ex:hasStartedOperation ex:BER_Operation, ex:JFK_Operation, ex:FCO_Operation, ex:LHR_Operation .
 
 
 # -- Alle Flugrouten von Berlin (BER) --
+# Die hasFlightNumber setzt sich aus den folgenden Bestandteilen zusammen 1. dem Kürzel "AT" 2. dem Flughafen, hier im ersten Beispiel steht 01 für Berlin als erster Flughafen und 02 London als zweiter Flughafen,
 ex:AT_BER_To_LHR
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0102" ;
-    ex:hasDeparture ex:BER ;
-    ex:hasDestination ex:LHR ;
-    ex:hasDuration 2 ; # 2:00 -> PT2H
-    ex:hasPlaneModel "A321XLR" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0102" ;
+    ex:hasDeparture          ex:BER ;
+    ex:hasDestination        ex:LHR ;
+    ex:hasDuration           2 ; # 2:00 -> PT2H
+    ex:hasPlaneModel         "A321XLR" ;
     ex:maxNumberOfPassengers 187 .
 
 ex:AT_BER_To_FCO
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0103" ;
-    ex:hasDeparture ex:BER ;
-    ex:hasDestination ex:FCO ;
-    ex:hasDuration 2.2 ; # 2:10 -> PT2H10M
-    ex:hasPlaneModel "A320neo" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0103" ;
+    ex:hasDeparture          ex:BER ;
+    ex:hasDestination        ex:FCO ;
+    ex:hasDuration           2.2 ; # 2:10 -> PT2H10M
+    ex:hasPlaneModel         "A320neo" ;
     ex:maxNumberOfPassengers 150 .
 
 ex:AT_BER_To_JFK
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0104" ;
-    ex:hasDeparture ex:BER ;
-    ex:hasDestination ex:JFK ;
-    ex:hasDuration 8.7 ; # 8:40 -> PT8H40M
-    ex:hasPlaneModel "A380-800" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0104" ;
+    ex:hasDeparture          ex:BER ;
+    ex:hasDestination        ex:JFK ;
+    ex:hasDuration           8.7 ; # 8:40 -> PT8H40M
+    ex:hasPlaneModel         "A380-800" ;
     ex:maxNumberOfPassengers 850 .
 
 
 # -- Alle Flugrouten von London (LHR) --
 ex:AT_LHR_To_BER
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0201" ;
-    ex:hasDeparture ex:LHR ;
-    ex:hasDestination ex:BER ;
-    ex:hasDuration 2 ; # 2:00 -> PT2H
-    ex:hasPlaneModel "A321XLR" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0201" ;
+    ex:hasDeparture          ex:LHR ;
+    ex:hasDestination        ex:BER ;
+    ex:hasDuration           2 ; # 2:00 -> PT2H
+    ex:hasPlaneModel         "A321XLR" ;
     ex:maxNumberOfPassengers 187 .
 
 ex:AT_LHR_To_FCO
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0203" ;
-    ex:hasDeparture ex:LHR ;
-    ex:hasDestination ex:FCO ;
-    ex:hasDuration 2.6 ; # 2:40 -> PT2H40M
-    ex:hasPlaneModel "A319neo" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0203" ;
+    ex:hasDeparture          ex:LHR ;
+    ex:hasDestination        ex:FCO ;
+    ex:hasDuration           2.6 ; # 2:40 -> PT2H40M
+    ex:hasPlaneModel         "A319neo" ;
     ex:maxNumberOfPassengers 150 .
 
 ex:AT_LHR_To_JFK
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0204" ;
-    ex:hasDeparture ex:LHR ;
-    ex:hasDestination ex:JFK ;
-    ex:hasDuration 8 ; # 8:00 -> PT8H
-    ex:hasPlaneModel "B747-SP" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0204" ;
+    ex:hasDeparture          ex:LHR ;
+    ex:hasDestination        ex:JFK ;
+    ex:hasDuration           8 ; # 8:00 -> PT8H
+    ex:hasPlaneModel         "B747-SP" ;
     ex:maxNumberOfPassengers 440 .
 
 
 # -- Alle Flugrouten von Rom (FCO) --
 ex:AT_FCO_To_BER
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0301" ;
-    ex:hasDeparture ex:FCO ;
-    ex:hasDestination ex:BER ;
-    ex:hasDuration 2.2 ; # 2:10 -> PT2H10M
-    ex:hasPlaneModel "A320neo" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0301" ;
+    ex:hasDeparture          ex:FCO ;
+    ex:hasDestination        ex:BER ;
+    ex:hasDuration           2.2 ; # 2:10 -> PT2H10M
+    ex:hasPlaneModel         "A320neo" ;
     ex:maxNumberOfPassengers 150 .
 
 ex:AT_FCO_To_LHR
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0302" ;
-    ex:hasDeparture ex:FCO ;
-    ex:hasDestination ex:LHR ;
-    ex:hasDuration 2.6 ; # 2:40 -> PT2H40M
-    ex:hasPlaneModel "A319neo" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0302" ;
+    ex:hasDeparture          ex:FCO ;
+    ex:hasDestination        ex:LHR ;
+    ex:hasDuration           2.6 ; # 2:40 -> PT2H40M
+    ex:hasPlaneModel         "A319neo" ;
     ex:maxNumberOfPassengers 150 .
 
 ex:AT_FCO_To_JFK
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0301" ;
-    ex:hasDeparture ex:FCO ;
-    ex:hasDestination ex:JFK;
-    ex:hasDuration 9.6 ; # 9:40 -> PT9H40M
-    ex:hasPlaneModel "A350-1000" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0301" ;
+    ex:hasDeparture          ex:FCO ;
+    ex:hasDestination        ex:JFK ;
+    ex:hasDuration           9.6 ; # 9:40 -> PT9H40M
+    ex:hasPlaneModel         "A350-1000" ;
     ex:maxNumberOfPassengers 410 .
 
 
 # -- Alle Flugrouten von New York (JFK) --
 ex:AT_JFK_To_BER
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0104" ;
-    ex:hasDeparture ex:JFK ;
-    ex:hasDestination ex:BER ;
-    ex:hasDuration 7.7 ; # 7:40 -> PT7H40M
-    ex:hasPlaneModel "A380-800" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0104" ;
+    ex:hasDeparture          ex:JFK ;
+    ex:hasDestination        ex:BER ;
+    ex:hasDuration           7.7 ; # 7:40 -> PT7H40M
+    ex:hasPlaneModel         "A380-800" ;
     ex:maxNumberOfPassengers 850 .
 
 ex:AT_JFK_To_LHR
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0204" ;
-    ex:hasDeparture ex:JFK ;
-    ex:hasDestination ex:LHR ;
-    ex:hasDuration 7 ; # 7:00 -> PT7H
-    ex:hasPlaneModel "B747-SP" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0204" ;
+    ex:hasDeparture          ex:JFK ;
+    ex:hasDestination        ex:LHR ;
+    ex:hasDuration           7 ; # 7:00 -> PT7H
+    ex:hasPlaneModel         "B747-SP" ;
     ex:maxNumberOfPassengers 440 .
 
 ex:AT_JFK_To_FCO
-    a ex:FlightRoute ;
-    ex:operatedBy ex:AirTrier ;
-    ex:hasFlightNumber "AT0301" ;
-    ex:hasDeparture ex:JFK ;
-    ex:hasDestination ex:FCO;
-    ex:hasDuration 8.5 ; # 8:30 -> PT8H30M
-    ex:hasPlaneModel "A350-1000" ;
+    a                        ex:FlightRoute ;
+    ex:operatedBy            ex:AirTrier ;
+    ex:hasFlightNumber       "AT0301" ;
+    ex:hasDeparture          ex:JFK ;
+    ex:hasDestination        ex:FCO ;
+    ex:hasDuration           8.5 ; # 8:30 -> PT8H30M
+    ex:hasPlaneModel         "A350-1000" ;
     ex:maxNumberOfPassengers 410 .
 
 
 # -- Definition aller (relevanten) Flüge --
+# Zur Einfachheit, wurden die Flüge gleich den Routen benannt mit einer Zähler-Variable am Ende, so ist der "AT_BER_To_LHR_1" der erste Flug von Berlin nach London und "AT_BER_To_LHR_2" der zweite
+
 ex:AT_BER_To_LHR_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_LHR ;
-    ex:hasCallsign "ATBL1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_BER_To_LHR ;
+    ex:hasCallsign     "ATBL1" ;
     ex:hasDepatureTime "2024-05-01T00:00:00" ;
-    ex:hasArrivalTime "2024-05-01T02:00:00" .
+    ex:hasArrivalTime  "2024-05-01T02:00:00" .
 
 ex:AT_LHR_To_BER_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_LHR_To_BER ;
-    ex:hasCallsign "ATLB1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_LHR_To_BER ;
+    ex:hasCallsign     "ATLB1" ;
     ex:hasDepatureTime "2024-05-01T02:30:00" ;
-    ex:hasArrivalTime "2024-05-01T04:30:00" .
+    ex:hasArrivalTime  "2024-05-01T04:30:00" .
 
 ex:AT_BER_To_FCO_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_FCO ;
-    ex:hasCallsign "ATBF1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_BER_To_FCO ;
+    ex:hasCallsign     "ATBF1" ;
     ex:hasDepatureTime "2024-05-01T05:00:00" ;
-    ex:hasArrivalTime "2024-05-01T07:10:00" . # 2h10min?
-
-ex:AT_BER_To_FCO_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_FCO ;
-    ex:hasCallsign "ATBF1" ;
-    ex:hasDepatureTime "2024-05-01T05:00:00" ;
-    ex:hasArrivalTime "2024-05-01T07:40:00" . # 2h10min?
+    ex:hasArrivalTime  "2024-05-01T07:10:00" .
 
 ex:AT_BER_To_JFK_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_BER_To_JFK ;
-    ex:hasCallsign "ATBJ1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_BER_To_JFK ;
+    ex:hasCallsign     "ATBJ1" ;
     ex:hasDepatureTime "2024-05-01T13:00:00" ;
-    ex:hasArrivalTime "2024-05-01T21:40:00" .
+    ex:hasArrivalTime  "2024-05-01T21:40:00" .
 
 ex:AT_JFK_To_BER_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_JFK_To_BER ;
-    ex:hasCallsign "ATJB1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_JFK_To_BER ;
+    ex:hasCallsign     "ATJB1" ;
     ex:hasDepatureTime "2024-05-02T12:00:00" ;
-    ex:hasArrivalTime "2024-05-02T19:40:00" .
-
-
+    ex:hasArrivalTime  "2024-05-02T19:40:00" .
 
 ex:AT_LHR_To_FCO_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_LHR_To_FCO ;
-    ex:hasCallsign "ATLF1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_LHR_To_FCO ;
+    ex:hasCallsign     "ATLF1" ;
     ex:hasDepatureTime "2024-05-01T03:00:00" ;
-    ex:hasArrivalTime "2024-05-01T05:40:00" .
+    ex:hasArrivalTime  "2024-05-01T05:40:00" .
 
 ex:AT_LHR_To_JFK_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_LHR_To_JFK ;
-    ex:hasCallsign "ATLJ1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_LHR_To_JFK ;
+    ex:hasCallsign     "ATLJ1" ;
     ex:hasDepatureTime "2024-05-01T03:30:00" ;
-    ex:hasArrivalTime "2024-05-01T11:30:00" .
-
-
+    ex:hasArrivalTime  "2024-05-01T11:30:00" .
 
 ex:AT_FCO_To_JFK_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_FCO_To_JFK ;
-    ex:hasCallsign "ATLF1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_FCO_To_JFK ;
+    ex:hasCallsign     "ATLF1" ;
     ex:hasDepatureTime "2024-05-01T08:00:00" ;
-    ex:hasArrivalTime "2024-05-01T17:40:00" .
+    ex:hasArrivalTime  "2024-05-01T17:40:00" .
 
 ex:AT_FCO_To_BER_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_FCO_To_BER ;
-    ex:hasCallsign "ATFB1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_FCO_To_BER ;
+    ex:hasCallsign     "ATFB1" ;
     ex:hasDepatureTime "2024-05-01T08:20:00" ;
-    ex:hasArrivalTime "2024-05-01T10:30:00" .
-
-
+    ex:hasArrivalTime  "2024-05-01T10:30:00" .
 
 ex:AT_JFK_To_FCO_1
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_JFK_To_FCO ;
-    ex:hasCallsign "ATJF1" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_JFK_To_FCO ;
+    ex:hasCallsign     "ATJF1" ;
     ex:hasDepatureTime "2024-05-02T03:00:00" ;
-    ex:hasArrivalTime "2024-05-02T11:30:00" .
-
-
+    ex:hasArrivalTime  "2024-05-02T11:30:00" .
 
 ex:AT_FCO_To_BER_2
-    a ex:Flight ;
-    ex:operatesRoute ex:AT_JFK_To_BER ;
-    ex:hasCallsign "ATFB2" ;
+    a                  ex:Flight ;
+    ex:operatesRoute   ex:AT_JFK_To_BER ;
+    ex:hasCallsign     "ATFB2" ;
     ex:hasDepatureTime "2024-05-02T14:20:00" ;
-    ex:hasArrivalTime "2024-05-02T16:30:00" .
+    ex:hasArrivalTime  "2024-05-02T16:30:00" .
 
 # -- Definition der Kunden sowie deren gebuchten Trips und damit auch FLugtickets --
 ex:customer_1
-    a ex:Customer ;
-    ex:hasName "Alfred Albrecht" ;
+    a                    ex:Customer ;
+    ex:hasName           "Alfred Albrecht" ;
     ex:hasPassportNumber 12345678 .
 
 ex:TripCustumer1
-    a ex:Trip ;
-    ex:hasPrice 1000 ;
-    ex:hasTimestamp "2024-01-01T12:00:00" ;
-    ex:bookedBy ex:customer_1 ;
+    a                        ex:Trip ;
+    ex:hasPrice              1000 ;
+    ex:orderTimestampTrip    "2024-01-01T12:00:00" ;
+    ex:startTimeTrip         "2024-05-01T00:00:00" ;
+    ex:endTimeTrip           "2024-05-02T19:40:00" ;
+    ex:bookedBy              ex:customer_1 ;
     ex:containsFlightTickets ex:Ticket_Seq_Customer1 .
 
 ex:FlightTicket_c1_1
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_LHR_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_BER_To_LHR_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1A" .
 
 ex:FlightTicket_c1_2
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_LHR_To_BER_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_LHR_To_BER_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "3F" .
 
 ex:FlightTicket_c1_3
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_FCO_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_BER_To_FCO_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "2C" .
 
 ex:FlightTicket_c1_4
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_FCO_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_FCO_To_BER_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1E" .
 
 ex:FlightTicket_c1_5
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_JFK_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_BER_To_JFK_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "4D" .
 
 ex:FlightTicket_c1_6
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_JFK_To_BER_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_JFK_To_BER_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1B" .
 
 
 ex:Ticket_Seq_Customer1
-    a rdf:Seq ;
+    a      rdf:Seq ;
     rdf:_1 ex:FlightTicket_c1_1 ;
     rdf:_2 ex:FlightTicket_c1_2 ;
     rdf:_3 ex:FlightTicket_c1_3 ;
@@ -535,89 +558,94 @@ ex:Ticket_Seq_Customer1
 
 
 
-
 ex:customer_2
-    a ex:Customer ;
-    ex:hasName "Berndt Brandt" ;
+    a                    ex:Customer ;
+    ex:hasName           "Berndt Brandt" ;
     ex:hasPassportNumber 10111213 .
 
+ex:TripCustumer2
+    a                        ex:Trip ;
+    ex:hasPrice              800 ;
+    ex:orderTimestampTrip    "2024-02-10T19:30:00" ;
+    ex:startTimeTrip         "2024-05-01T00:00:00" ;
+    ex:endTimeTrip           "2024-05-02T19:40:00" ;
+    ex:bookedBy              ex:customer_2 ;
+    ex:containsFlightTickets ex:Ticket_Seq_Customer2 .
+
 ex:FlightTicket_c2_1
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_LHR_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_BER_To_LHR_1 ;
     ex:seatClassification "Economy" ;
     ex:seatIdentification "26J" .
 
 ex:FlightTicket_c2_2
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_LHR_To_FCO_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_LHR_To_FCO_1 ;
     ex:seatClassification "Econmy" ;
     ex:seatIdentification "23H" .
 
 ex:FlightTicket_c2_3
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_FCO_To_JFK_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_FCO_To_JFK_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1A" .
 
 ex:FlightTicket_c2_4
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_JFK_To_BER_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_JFK_To_BER_1 ;
     ex:seatClassification "Economy" ;
     ex:seatIdentification "14C" .
 
 ex:Ticket_Seq_Customer2
-    a rdf:Seq ;
+    a      rdf:Seq ;
     rdf:_1 ex:FlightTicket_c2_1 ;
     rdf:_2 ex:FlightTicket_c2_2 ;
     rdf:_3 ex:FlightTicket_c2_3 ;
     rdf:_4 ex:FlightTicket_c2_4 .
 
-ex:TripCostumer2
-    a ex:Trip ;
-    ex:hasPrice 800 ;
-    ex:hasTimestamp "2024-04-04T12:00:00" ;
-    ex:bookedBy ex:customer_2 ;
-    ex:containsFlightTickets ex:Ticket_Seq_Customer2 .
 
 ex:customer_3
-    a ex:Customer ;
-    ex:hasName "Christoph Conrad" ;
+    a                    ex:Customer ;
+    ex:hasName           "Christoph Conrad" ;
     ex:hasPassportNumber 1415161 .
 
+ex:TripCustumer3
+    a                        ex:Trip ;
+    ex:hasPrice              800 ;
+    ex:orderTimestampTrip    "2024-04-12T12:00:00" ;
+    ex:startTimeTrip         "2024-05-01T00:00:00" ;
+    ex:endTimeTrip           "2024-05-02T00:25:00" ;
+    ex:bookedBy              ex:customer_3 ;
+    ex:containsFlightTickets ex:Ticket_Seq_Customer3 .
+
 ex:FlightTicket_c3_1
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_BER_To_LHR_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_BER_To_LHR_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1C" .
 
 ex:FlightTicket_c3_2
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_LHR_To_JFK_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_LHR_To_JFK_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1C" .
 
 ex:FlightTicket_c3_3
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_JFK_To_FCO_1 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_JFK_To_FCO_1 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1C" .
 
 ex:FlightTicket_c3_4
-    a ex:FlightTicket ;
-    ex:forFlight ex:AT_FCO_To_BER_2 ;
+    a                     ex:FlightTicket ;
+    ex:forFlight          ex:AT_FCO_To_BER_2 ;
     ex:seatClassification "Business" ;
     ex:seatIdentification "1C" .
 
 ex:Ticket_Seq_Customer3
-    a rdf:Seq ;
+    a      rdf:Seq ;
     rdf:_1 ex:FlightTicket_c3_1 ;
     rdf:_2 ex:FlightTicket_c3_2 ;
     rdf:_3 ex:FlightTicket_c3_3 ;
     rdf:_4 ex:FlightTicket_c3_4 .
 
-ex:TripCostumer3
-    a ex:Trip ;
-    ex:hasPrice 800 ;
-    ex:hasTimestamp "2024-04-12T12:00:00" ;
-    ex:bookedBy ex:customer_3 ;
-    ex:containsFlightTickets ex:Ticket_Seq_Customer3 .
