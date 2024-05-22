@@ -3,9 +3,10 @@
 # Sascha Stülb (s4sastue@uni-trier.de, 1470760)
 
 # ANNAHMEN
-# - Der Zeitstempel eines Trips wird als Buchungszeitpunkt verstanden
-# - Der Trip startet mit dem Startzeitpunkt des ersten Flugs und endet mit der Ankunftszeit des letzten Flugs
-# - Es existieren keine Zeitzonen, alle Zeiten (Order-, Start-, sowie Landezeiten) sind in UTC angegeben
+# - Der Zeitstempel eines Trips wird als Buchungszeitpunkt verstanden.
+# - Der Trip startet mit dem Startzeitpunkt des ersten Flugs und endet mit der Ankunftszeit des letzten Flugs.
+# - Es existieren keine Zeitzonen, alle Zeiten (Order-, Start-, sowie Landezeiten) sind in UTC angegeben.
+# - Flüge können in den Trips wiederverwendet werden, bsp: alle Trips starten mit dem Flug "ex:AT_BER_To_LHR_1", damit sichergestellt werden kann, dass wie aus der Aufgabenstellung gefordert die Trips am 01.05. starten. Danach unterscheiden sich die Trips im weiteren Verlauf.
 
 @prefix ex:   <http://airtrier.de/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -53,13 +54,13 @@ ex:Airline
     a            rdfs:Class ;
     rdfs:comment "Class with which an airline can be described" .
 
-ex:numberOfEmployees
+ex:airlineNumberOfEmployees
     a            rdf:Property ;
     rdfs:domain  ex:Airline ;
     rdfs:range   xsd:integer ;
     rdfs:comment "Property used to describe how many employees are employed by an airline" .
 
-ex:hasManager
+ex:airlineHasManager
     a            rdf:Property ;
     rdfs:domain  ex:Airline ;
     rdfs:range   xsd:string ;
@@ -232,11 +233,12 @@ ex:endTimeTrip
     rdfs:range  xsd:dateTime .
 
 ex:Ticket_Seq_Customer
-    a rdfs:Container .
+    a rdfs:Container ;
+    rdfs:comment "Für die Anzahl an Tickets zuzuordnen wir das Konstrukt des Containers verwendet, genauer gesagt eine Sequenz 1. Die Elemente sind geordnet - notwendig wegen den Flügen 2. Die Anzahl kann beliebig erweitert werden" .
 
 
 ## -- Instanziierung
-
+# Hier erhält jeder Airport einen Manager und eine Mitarbeiterzahl - Daten entsprechen der Realität
 ex:BER
     a                           ex:Airport ;
     ex:airportHasManager        "Aletta von Massenbach" ;
@@ -257,7 +259,7 @@ ex:LHR
     ex:airportHasManager        "Thomas Woldbye" ;
     ex:airportNumberOfEmployees 6400 .
 
-
+# Hier wird das Jahr festgelegt in welchem die AirTrier den Betrieb an dem entsprechenden Flughafen aufgenommen hat
 ex:BER_Operation
     a            ex:AirlineAirportOperation ;
     ex:atAirport ex:BER ;
@@ -278,16 +280,18 @@ ex:LHR_Operation
     ex:atAirport ex:LHR ;
     ex:inYear    2001 .
 
-
+# Instanziierung der erstellten Airline - AirTrier
 ex:AirTrier
-    a                      ex:Airline ;
-    ex:numberOfEmployees   420 ;
-    ex:hasManager          "CarstenSphor" ;
-    ex:hasStartedOperation ex:BER_Operation, ex:JFK_Operation, ex:FCO_Operation, ex:LHR_Operation .
+    a                           ex:Airline ;
+    ex:airlineNumberOfEmployees 420 ;
+    ex:airlineHasManager        "CarstenSphor" ;
+    ex:hasStartedOperation      ex:BER_Operation, ex:JFK_Operation, ex:FCO_Operation, ex:LHR_Operation .
 
 
+# Es werden alle möglichen Flugrouten dargestellt
+# Hierbei wird jede Verbindung also von Berlin nach London und von London nach Berlin modelliert, damit die Semantik intuitiver und detaillierter ist
+# Die "hasFlightNumber" setzt sich aus den folgenden Bestandteilen zusammen 1. dem Kürzel "AT" 2. dem Flughafen, hier im ersten Beispiel steht 01 für Berlin als erster Flughafen und 02 London als zweiter Flughafen,
 # -- Alle Flugrouten von Berlin (BER) --
-# Die hasFlightNumber setzt sich aus den folgenden Bestandteilen zusammen 1. dem Kürzel "AT" 2. dem Flughafen, hier im ersten Beispiel steht 01 für Berlin als erster Flughafen und 02 London als zweiter Flughafen,
 ex:AT_BER_To_LHR
     a                        ex:FlightRoute ;
     ex:operatedBy            ex:AirTrier ;
@@ -416,7 +420,8 @@ ex:AT_JFK_To_FCO
 
 
 # -- Definition aller (relevanten) Flüge --
-# Zur Einfachheit, wurden die Flüge gleich den Routen benannt mit einer Zähler-Variable am Ende, so ist der "AT_BER_To_LHR_1" der erste Flug von Berlin nach London und "AT_BER_To_LHR_2" der zweite
+# Zur Einfachheit, wurden die Flüge gleich den Routen benannt mit einer Zähler-Variable am Ende, so ist der "AT_FCO_To_BER_1" der erste Flug von Rom nach Berlin und "AT_FCO_To_BER_2" der zweite
+# Jeder Flug besitzt individuelle Start- und Ankunftszeiten
 
 ex:AT_BER_To_LHR_1
     a                  ex:Flight ;
@@ -496,11 +501,13 @@ ex:AT_FCO_To_BER_2
     ex:hasArrivalTime  "2024-05-02T16:30:00" .
 
 # -- Definition der Kunden sowie deren gebuchten Trips und damit auch FLugtickets --
+# Reihenfolge 1. Customer 2. Trip 3. Flugticket 4. Seqeunz der Tickets
 ex:customer_1
     a                    ex:Customer ;
     ex:hasName           "Alfred Albrecht" ;
     ex:hasPassportNumber 12345678 .
 
+# Jeder Trip wird von einem Kunden gebucht, weshalb diesem auch die gesamte Anzahl der Flugtickets zugewiesen wird (containsFlightTickets)
 ex:TripCustumer1
     a                        ex:Trip ;
     ex:hasPrice              1000 ;
@@ -510,6 +517,7 @@ ex:TripCustumer1
     ex:bookedBy              ex:customer_1 ;
     ex:containsFlightTickets ex:Ticket_Seq_Customer1 .
 
+# Bei den Flugtickets wird nicht erneut der Kundenname verwendet, um erhöhte Redundanz zu vermeiden und da in der Aufgabenstellung beschrieben wird, dass der Kunde einen Trip bucht, weshalb der Kundenname nur bei Trip zugewiesen wird
 ex:FlightTicket_c1_1
     a                     ex:FlightTicket ;
     ex:forFlight          ex:AT_BER_To_LHR_1 ;
@@ -546,7 +554,8 @@ ex:FlightTicket_c1_6
     ex:seatClassification "Business" ;
     ex:seatIdentification "1B" .
 
-
+# Hier erfolgt die Instaziierung der Sequenz, welche in diesem Fall aus sechs Flügen besteht und je nach Trip angepasst werden kann
+# Alle Flüge werden als geordnete Liste dargestellt, dadurch kann die Reihenfolge der Flüge eingehalten werden
 ex:Ticket_Seq_Customer1
     a      rdf:Seq ;
     rdf:_1 ex:FlightTicket_c1_1 ;
@@ -557,7 +566,7 @@ ex:Ticket_Seq_Customer1
     rdf:_6 ex:FlightTicket_c1_6 .
 
 
-
+# Der definierte Ablauf wiederholt sich für die Trips zwei und drei, allerdings jeweils mit unterschiedlichen Werten
 ex:customer_2
     a                    ex:Customer ;
     ex:hasName           "Berndt Brandt" ;
