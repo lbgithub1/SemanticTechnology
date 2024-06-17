@@ -1,7 +1,7 @@
 a)
 SELECT (COUNT(?s) AS ?anzahlTripel)
 WHERE {
-  ?s ?p ?o .
+    ?s ?p ?o .
 }
 
 ----------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ b)
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 SELECT (COUNT(?pub) AS ?anzahlPublication)
 WHERE {
-   ?pub a dblp:Publication .
+    ?pub a dblp:Publication .
 }
 
 ----------------------------------------------------------------------------------------
@@ -18,9 +18,9 @@ PREFIX dblp: <https://dblp.org/rdf/schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?creatorname
 WHERE {
-   ?person a dblp:Person .
-   ?person owl:sameAs <https://orcid.org/0000-0001-7580-4351> .
-   ?person dblp:creatorName ?creatorname .
+    ?person a dblp:Person .
+    ?person owl:sameAs <https://orcid.org/0000-0001-7580-4351> .
+    ?person dblp:creatorName ?creatorname .
 }
 
 ----------------------------------------------------------------------------------------
@@ -28,8 +28,8 @@ d)
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 SELECT (COUNT(?person) AS ?perNum)
 WHERE {
-  ?person a dblp:Person .
-  ?person dblp:wikidata ?p .
+    ?person a dblp:Person .
+    ?person dblp:wikidata ?p .
 }
 
 ----------------------------------------------------------------------------------------
@@ -37,9 +37,9 @@ e)
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 SELECT ?pubTitle
 WHERE {
-  ?pub a dblp:Publication.
-  ?pub dblp:title ?pubTitle .
-  FILTER (CONTAINS (?pubTitle, "CBR")).
+    ?pub a dblp:Publication.
+    ?pub dblp:title ?pubTitle .
+    FILTER (CONTAINS (?pubTitle, "CBR")).
 }
 LIMIT 10
 
@@ -48,14 +48,14 @@ f)
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 SELECT ?pubTitle (COUNT(?author) AS ?num)
 WHERE {
-  ?pubUnion dblp:authoredBy <https://dblp.org/pid/b/RalphBergmann>, <https://dblp.org/pid/227/6072-1> .
-  ?pubUnion dblp:authoredBy ?author .
-  FILTER (
-     ?author != <https://dblp.org/pid/b/RalphBergmann>
-	 && ?author != <https://dblp.org/pid/227/6072-1>
-  ) .
-  ?pub dblp:authoredBy ?author .
-  ?pub dblp:title ?pubTitle .
+    ?pubUnion dblp:authoredBy <https://dblp.org/pid/b/RalphBergmann>, <https://dblp.org/pid/227/6072-1> .
+    ?pubUnion dblp:authoredBy ?author .
+    FILTER (
+        ?author != <https://dblp.org/pid/b/RalphBergmann>
+        && ?author != <https://dblp.org/pid/227/6072-1>
+    ) .
+    ?pub dblp:authoredBy ?author .
+    ?pub dblp:title ?pubTitle .
 }
 GROUP BY ?pubTitle
 ORDER BY DESC(?num)
@@ -66,8 +66,8 @@ g)
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 SELECT ?person ?numberOfPublications (GROUP_CONCAT(DISTINCT ?name; separator=" | ") AS ?names) (GROUP_CONCAT(DISTINCT ?affiliation; separator=" | ") AS ?affiliations)
 WHERE{
-	{
-		SELECT DISTINCT ?person (COUNT(?publication) AS ?numberOfPublications)
+    {
+        SELECT DISTINCT ?person (COUNT(?publication) AS ?numberOfPublications)
 		WHERE {
 			?person a dblp:Person .
 			?person dblp:affiliation ?affiliation .

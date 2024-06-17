@@ -1,4 +1,4 @@
-package E2;
+package A1.E2;
 
 import org.apache.jena.rdf.model.*;
 
@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Model m = ModelFactory.createDefaultModel()
-                .read("E2_copy.ttl", "TURTLE");
+                .read("A1/E2.ttl", "TURTLE");
         m.write(System.out);
     }
 }

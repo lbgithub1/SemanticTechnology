@@ -1,11 +1,11 @@
-package E1;
+package A1.E1;
 
 //necessary imports are inserted
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
 
-public class E1 {
+public class Main {
 
     //Variablen werden separat erstellt, damit der Code dynamisch und übersichtlich bleibt
     static String websiteURI = "http://www.uni-trier.de/index.php?id=1890";
