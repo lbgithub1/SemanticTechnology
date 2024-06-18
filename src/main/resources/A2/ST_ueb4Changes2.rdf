@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8/"
+     xml:base="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#isIngredientOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#isIngredientOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Chesse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Chesse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#OnlyVegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#OnlyVegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutFish"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SandwichIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutFish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutFish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sandwich"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#hasIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Avocado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Avocado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Baguette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Baguette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Basil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Basil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ciabatta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ciabatta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Cucumber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Cucumber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#GreenSalad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#GreenSalad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#ItalianSandwich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#ItalianSandwich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#OnlyVegetables"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Baguette"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Basil"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ciabatta"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mozzarella"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#TomatoSauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ketchup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ketchup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mayonnaise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mayonnaise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mozzarella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mozzarella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Chesse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Prosciutto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Prosciutto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#ProsciuttoSandwich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#ProsciuttoSandwich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutFish"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Baguette"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Cucumber"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ketchup"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Prosciutto"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WhiteBread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Salami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Salami">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SalmonSandwich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#SalmonSandwich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WithoutMeat"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Avocado"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Ciabatta"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Mayonnaise"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Salmon"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WholeWheatBread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#TomatoSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#TomatoSauce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Tuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Tuna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WhiteBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WhiteBread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WholeWheatBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#WholeWheatBread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Bread"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Chesse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Fish"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Meat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Sauce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sascha/ontologies/2024/5/untitled-ontology-8#Vegetable"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
