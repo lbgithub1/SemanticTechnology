@@ -31,6 +31,32 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/group1/ontology#Sandwich"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>Brief explanation why the description and characteristics were selected as chosen.
+
+Description:
+hasIngredient combines the elements of the Sandwich class with the elements of the SandwichIngredient class. hasIngredient is an object property.
+Example: Sandwich hasIngredient min 1 sauce
+
+Inverse Of: isIngredientOf ist the inversion of hasIngredient therefore it is selected in the Object property. The property allows to derive that if A is linked to B by the property hasIngredient, then B and A are also linked to each other by the property isIngredientOf.
+
+Domains (intersection): Sandwich is selected so that the structure of the ontology corresponds to a higher consistency and clarity. By specifying the Sandwich class for the domain, automatic classification is also integrated. 
+
+Ranges (intersection): SandwichIngredient was selected here for the same reasons for domains. In addition, the assignment ensures compliance with the modeling rules and facilitates an easier ontology extension
+
+Explanation of the characteristics:
+Functional: If hasIngredient would be marked as functional, a sandwich could only have one ingredient, which contradicts reality - Not suitable
+
+Inverse functional: If isIngredientOf were inverse-functional, it would mean that an ingredient can only appear in exactly one sandwich - Not suitable
+
+Transitive: From our point of view, it is unlikely that one ingredient is transitive to another one. The relationships between sandwiches and ingredients are direct - Not suitable
+
+Symmetric: Marking a property as Symmetric means that the relationship is bidirectional, but here the connections between a sandwich and the ingredients are clearly unidirectional - Not suitable
+
+Asymmetric: The hasIngredient property is asymmetric, therefore it is used. A sandwich consists of ingredients, but an ingredient does not consist of sandwiches.
+
+Reflexive: A sandwich is not an ingredient in itself. It cannot be part of itself - Not suitable
+
+Irreflexive: The characteristic prevents an individual from being in an inconsistent relationship with themselves. Irreflexivity ensures that no sandwich ist wrongly listed as its own ingredient.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -42,6 +68,11 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/group1/ontology#Sandwich"/>
+        <rdfs:comment>Example: The use of the object property is shown by the example. Basil is ingredient of the Italian Sandwich. So an igredient is ingredient of a sandwich.
+
+Characteristics: The characteristics are exactly the same as hasIngredientOf. 
+
+Description: In the description, everything is swapped exactly once because, as described in the task, isIngredientOf acts as an inverse role to hasIngredient. So hasIngredient is in InverseOf, SandwichIngredient is in Domains and Sandwich is in Ranges.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -61,6 +92,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Bread">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>This class represents the bread from the task assignment. The class is a subclass of SandwichIngredient and has the instances Baguette, Ciabatta, WhiteBread, WholeWheatBread assigned to it. 
+In addition, the class is disjoint from the other subclasses of the SandwichIngredient class (Meat, Cheese, Fish, Sauce, Vegetable).</rdfs:comment>
     </owl:Class>
     
 
@@ -69,6 +102,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Chesse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>The class represents the cheese in the application scenario. Instances of the class are Mozarella and the class is also disjoint from all other subclasses of the class SandwichIngredient.</rdfs:comment>
     </owl:Class>
     
 
@@ -77,6 +111,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Fish">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>Fish is also a subclass of SandwichIngredient and has the instances Salmon and Tuna. 
+Of course, this subclass is also disjoint from the other ingredients.</rdfs:comment>
     </owl:Class>
     
 
@@ -85,6 +121,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Meat">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>The Meat class, like all other ingredients, is also a subclass of the SandwichIngredient class. 
+The instances of the class are Proscuitto and Salami.</rdfs:comment>
     </owl:Class>
     
 
@@ -95,6 +133,8 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#Sandwich"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#WithoutFish"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#WithoutMeat"/>
+        <rdfs:comment>The next class is the OnlyVegetables. The class is a sub-class of Sandwich, WithoutFish and WithoutMeat. Furthermore, the class has all the conditions that are also declared for the Sandwich class in the SubClassOf property, as well as the properties of WithoutFish and Withoutmeat. 
+An instance of the OnlyVegetables class is the ItalianSandwich.</rdfs:comment>
     </owl:Class>
     
 
@@ -124,13 +164,19 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>The class of the same name represents the sandwiches in the ontology. In the sandwich description, we have integrated all the necessary criteria into the SubClassOf property. According to the task, a sandwich has exactly two slices of bread and at least two other ingredients, one of which is a sauce. At the same time, the Sandwich class is disjoint from the SandwichIngredient class.
+We opted for SubClassOf because it means that all the specified criteria must be fulfilled. 
+At equivalentTo, we found that only one of the specified conditions needs to be met to count as a full sandwich. 
+Example equivalentTo: A sandwich with two pieces of bread and a sauce could already count as a full sandwich, which is not correct. We have therefore used SubClassOf to ensure that all conditions are actually fulfilled.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/group1/ontology#SandwichIngredient -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#SandwichIngredient">
+        <rdfs:comment>The SandwichIngredient class is the second main class alongside the normal Sandwich class. This class represents all ingredients. The class is also disjoint from the normal Sandwich class.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -138,6 +184,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Sauce">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>This class represents the sauce from the task. The instances are Ketchup, Mayonnaise and Tomato Sauce.</rdfs:comment>
     </owl:Class>
     
 
@@ -146,6 +193,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/group1/ontology#Vegetable">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/group1/ontology#SandwichIngredient"/>
+        <rdfs:comment>This class represents vegetables and has the instances Avocado, Basil, Cucumber, Green Salad.</rdfs:comment>
     </owl:Class>
     
 
@@ -161,6 +209,8 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/group1/ontology#Fish"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The WithoutFish class also inherits from the Sandwich class and also has the specification that no fish is permitted. This specification is written into the SubClassOf.
+An instance of the class is the ProscuittoSandwich.</rdfs:comment>
     </owl:Class>
     
 
@@ -176,6 +226,7 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/group1/ontology#Meat"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The WithoutMeat class is almost identical to the WithoutFish class, but with the special feature that no meat is allowed here, which is why this is also specified in the description - hasIngredient exactly 0 meat</rdfs:comment>
     </owl:Class>
     
 
@@ -195,6 +246,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Avocado">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Vegetable"/>
+        <rdfs:comment>The instance/ individual of the same name represents the avocado according to the task and is of type Vegetables.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -203,6 +255,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Baguette">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Bread"/>
+        <rdfs:comment>The individual labeled Baguette belongs to the Bread class.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -211,6 +264,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Basil">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Vegetable"/>
+        <rdfs:comment>The instance referred to as &quot;Basil&quot; represents the Basil from the task description and is classified as Vegetable.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -219,6 +273,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Ciabatta">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Bread"/>
+        <rdfs:comment>Ciabatta, like Baguette, is an instance of Bread.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -227,6 +282,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Cucumber">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Vegetable"/>
+        <rdfs:comment>Cucumber is properly assigned to Vegetables.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -235,6 +291,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#GreenSalad">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Vegetable"/>
+        <rdfs:comment>Green Salad, like Avocado, Basil and Cucumber, is classified as a Vegetable.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -248,6 +305,8 @@
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Ciabatta"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Mozzarella"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#TomatoSauce"/>
+        <rdfs:comment>Italian-Sandwich is assigned to the class onlyVegetables, so the class is automatically of the type Sandwich and at the same time assigned withoutFish and withoutMeat. 
+In addition, the individual ingredients that make up an Italian sandwich are listed in the object property assertions.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -256,6 +315,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Ketchup">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Sauce"/>
+        <rdfs:comment>Ketchup is assigned to the Sauce type.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -264,6 +324,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Mayonnaise">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Sauce"/>
+        <rdfs:comment>Like Ketchup, Mayonnaise is classified as a sauce.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -272,6 +333,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Mozzarella">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Chesse"/>
+        <rdfs:comment>Mozzarella is from type Cheese.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -280,6 +342,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Prosciutto">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Meat"/>
+        <rdfs:comment>Proscuitto is from type Meat.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -293,6 +356,7 @@
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Ketchup"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Prosciutto"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#WhiteBread"/>
+        <rdfs:comment>ProscuittoSandwich is an instance of the class withoutFish, which means that the sandwich type is automatically assigned to the Sandwich class and fulfills all the conditions of the task. At the same time, all components of the ProscuittoSandwich are assigned in the object property assertions. From our perspective, only the object property assertions make sense here, due to reusability, interrelationsships and consistency with ontological models.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -301,6 +365,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Salami">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Meat"/>
+        <rdfs:comment>Salami is assigned to the Meat type.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -309,6 +374,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Salmon">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Fish"/>
+        <rdfs:comment>Salmon is of the Fish type.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -322,6 +388,7 @@
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Mayonnaise"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#Salmon"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/group1/ontology#WholeWheatBread"/>
+        <rdfs:comment>The SalmonSandwich is an instance of the class sandwich without meat and as with the other two sandwich types, the components are listed in the object property assertions for the same reasons.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -330,6 +397,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#TomatoSauce">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Sauce"/>
+        <rdfs:comment>Like ketchup and mayonnaise, tomato sauce is classified as a sauce.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -338,6 +406,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#Tuna">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Fish"/>
+        <rdfs:comment>Tuna is assigned to the Fish type.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -346,6 +415,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#WhiteBread">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Bread"/>
+        <rdfs:comment>WhiteBread is allocated to the Bread class.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -354,6 +424,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/group1/ontology#WholeWheatBread">
         <rdf:type rdf:resource="http://www.semanticweb.org/group1/ontology#Bread"/>
+        <rdfs:comment>WholeWheatBread is defined as a type of the Bread class.</rdfs:comment>
     </owl:NamedIndividual>
     
 
