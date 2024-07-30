@@ -1865,6 +1865,85 @@ The process is linked to the operation sequences by the object porperty &apos;ha
     
 
 
+    <!-- http://iot.uni-trier.de/FTOnto#Abnormal_Acceleration_Result -->
+
+    <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#Abnormal_Acceleration_Result">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_x_acceleration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_y_acceleration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_z_acceleration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iot.uni-trier.de/FTOnto#AccelerationResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.uni-trier.de/FTOnto#Abnormal_Pressure_Result -->
+
+    <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#Abnormal_Pressure_Result">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_pressure"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minExclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.002</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iot.uni-trier.de/FTOnto#PressureResult"/>
+    </owl:Class>
+    
+
+
     <!-- http://iot.uni-trier.de/FTOnto#Acceleration -->
 
     <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#Acceleration">
@@ -3132,6 +3211,75 @@ This temerature sensor is just a extra capabilitiy of the used pressure sensors 
         <FTOnto:hasMandatoryParameter rdf:resource="http://iot.uni-trier.de/FTOnto#Parameter_DM_Transport_From_To_Start"/>
         <rdfs:comment>Transports the workpiece at the specified machine from the start position to the end position.</rdfs:comment>
         <rdfs:label>Service dm/transport_from_to</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Blocked -->
+
+    <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Blocked">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_observation"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_result"/>
+                        <owl:someValuesFrom rdf:resource="http://iot.uni-trier.de/FTOnto#Abnormal_Acceleration_Result"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <owl:disjointWith rdf:resource="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Leakage -->
+
+    <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Leakage">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_observation"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_result"/>
+                        <owl:someValuesFrom rdf:resource="http://iot.uni-trier.de/FTOnto#Abnormal_Pressure_Result"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <owl:disjointWith rdf:resource="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful -->
+
+    <owl:Class rdf:about="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.uni-trier.de/FTOnto#has_observation"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onDataRange>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:onDataRange>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
     </owl:Class>
     
 

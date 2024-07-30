@@ -1,0 +1,27 @@
+
+PREFIX iot: <http://iot.uni-trier.de/FTOnto#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT ?execution ?start_time ?end_time
+WHERE{
+	{
+		SELECT ?execution
+		WHERE {
+			?execution a sosa:Procedure ;
+				   iot:executes_service iot:Service_VGR_Pick_Up_And_Transport_With_Machine_VGR_1_With_Start_Sink_2_With_End_Waiting_Platform;
+				   iot:has_observation ?observation .
+	
+			?observation sosa:observedProperty iot:HBW_1_Light_Barrier_3_Interrupted ;
+				     sosa:hasSimpleResult ?result .
+	
+		}
+		GROUP BY ?execution
+		HAVING (MAX(?result) = 0)
+	}
+	
+	?execution iot:start_time ?start_time;
+		   iot:end_time ?end_time
+
+}
+
+
