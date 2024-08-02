@@ -350,6 +350,7 @@
     <owl:ObjectProperty rdf:about="http://iot.uni-trier.de/FTOnto#executes_service">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://iot.uni-trier.de/FTOnto#Service"/>
+        <rdfs:comment>Die Object Property wird dafür verwendet um Services durchzuführen, da eine Procedure, Services durchführt, ist diese Property von zentraler Bedeutung.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -578,6 +579,7 @@ Machine components can consist of one ore more machine components.</rdfs:comment
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment>Die Object Property wird für den Import der Sensordaten benötigt. Als Domain ist der Eigenschaft Procedures zugeordnet und in den Ranges die Observation. Es dient dazu die einzelnen Sensordaten mit den Beobachtungen zu verknüpfen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -589,6 +591,7 @@ Machine components can consist of one ore more machine components.</rdfs:comment
         <owl:inverseOf rdf:resource="http://iot.uni-trier.de/FTOnto#is_result_of"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:comment>Die Object property ist für eine klare und übersichtliche Modellierung innerhalb der Ontologie angelegt worden. Mit den bereits existierenden has result-Eigenschaften gibt es Probleme mit dem Reasoner, da dieser durch die gleichen Ranges Observations falsch zuordnet. So wurden die Results der Observations auch den Services zugeordnet, was aus unserer Perspektive nicht korrekt ist. Durch den Unterstrich im Namen sind die Object Properties klar voneinander getrennt, wordurch der Zuordnungsfehler des Reasoners vermieden werden kann.  Die Inverse Of-Eigenschaft lautet is_result_of, welche ebenfals hinzugefügt wurde. Durch die beiden Eigenschaften kommt es zu keiner Verwechslung und die Ergebnisse können den entsprechenden Observations zugeordnet werden. Observation wurde als Domain und Result als range zugewiesen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1085,6 +1088,7 @@ This is an inverse property to the object property defied by Cheng et al. to pas
     <owl:ObjectProperty rdf:about="http://iot.uni-trier.de/FTOnto#is_result_of">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment>Die Eigenschaft ist die Inverse Of-Object property von has_result. Diese wurde aus dem gleichen Grund, wie has_result hinzugefügt. Damit alle Ergebnisse eindeutig zugeordnet werden können und keine Probleme mit dem Reasoner entstehen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1573,6 +1577,7 @@ This is the inverse property to avoid the &apos;missing inverse property&apos; p
     <owl:DatatypeProperty rdf:about="http://iot.uni-trier.de/FTOnto#end_time">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Die Data property wird als Endzeitpunkt für die Services benötigt. Die Domain ist Procedure und als Range ist xsd:dateTime angegeben. Gleichzeitig existiert auch die Data property start_time.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1914,6 +1919,7 @@ The process is linked to the operation sequences by the object porperty &apos;ha
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://iot.uni-trier.de/FTOnto#AccelerationResult"/>
+        <rdfs:comment>In dieser Klasse werden die Bedingungen für die erste Fehlerklasse (ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Blocked) definiert. Hierfür wird werden die acceleration values für jede einzelne Achse beobachtet.</rdfs:comment>
     </owl:Class>
     
 
@@ -1940,6 +1946,7 @@ The process is linked to the operation sequences by the object porperty &apos;ha
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://iot.uni-trier.de/FTOnto#PressureResult"/>
+        <rdfs:comment>In dieser Klasse werden wie bei der Abnormal_Acceleration_Result die Bedingungen definiert für die entsprechende Fehlerklasse (ServiceExecution_VGR-PUT-VGR1-S2-WP_FailureMode_VGR_Leakage). Sobald die Luftdruckmessung weniger als 0.002 bar werden die entsprechenden Beobachtungen der Klasse zugeordnet.</rdfs:comment>
     </owl:Class>
     
 
@@ -3231,6 +3238,7 @@ This temerature sensor is just a extra capabilitiy of the used pressure sensors 
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <owl:disjointWith rdf:resource="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful"/>
+        <rdfs:comment>Die Klasse repräsentiert einen möglichen Fehler bei der Durchführung des Service. Hierbei ist in der Equivalent To-Eigenschaft ein Abnormal_Acceleration_Result eingefügt, welches mittels has_observation überprüft, ob der entsprechende Fehler aufgetreten ist. Hierbei wird die Logik in das Abnormal_Acceleration_Result ausgelagert. Durch das Auslagern der Bedingungen in die Result-Klasse, wird versucht die Ontologie so übersichtlich und nachvollziehbar wie möglich zu gestalten. Die Subklasse ist Procedure und die Klasse ist mit ServiceExecution_VGR-PUT-VGR1_S2_WP_Successful disjunkt.</rdfs:comment>
     </owl:Class>
     
 
@@ -3251,6 +3259,7 @@ This temerature sensor is just a extra capabilitiy of the used pressure sensors 
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <owl:disjointWith rdf:resource="http://iot.uni-trier.de/FTOnto#ServiceExecution_VGR-PUT-VGR1-S2-WP_Successful"/>
+        <rdfs:comment>Die Klasse stellt ebenfalls einen möglichen Fehler bei der Durchführung des Service dar. Dafür ist in der Equivalent To-Eigenschaft das Abnormal_Pressure_Result eingefügt, welches mittels has_observation überprüft, ob der entsprechende Fehler aufgetreten ist. Hierbei wird ,wie beim Abnormal_Acceleration_Result , die Logik in das Abnormal_Pressure_Result ausgelagert. Das Auslagern in die Result-Klasse versucht die gleichen Effekte zu erzielen wie beim Abnormal_Acceleration_Result. Die Subklasse ist Procedure und die Klasse ist mit ServiceExecution_VGR-PUT-VGR1_S2_WP_Successful disjunkt.</rdfs:comment>
     </owl:Class>
     
 
@@ -3280,6 +3289,7 @@ This temerature sensor is just a extra capabilitiy of the used pressure sensors 
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment>Bei dieser Klasse ist im Gegensatz zu den beiden vorherigen Fehlerklassen, die Bedingung mittels has_observation direkt in die Equivalent To-Charakteristik eingefügt. Die Klasse wird zugeordnet, wenn die postcondition als korrekt angesehen werden kann. Die Erstellung einer weiteren Result-Klasse wie bei den beiden vorherigen Fehler-Klassen, hat aus unserer Perspektive keinen weiteren Beitrag für ein besseres Ontologieverständnis geleistet, weshalb die Bedingungen direkt integriert worden sind.</rdfs:comment>
     </owl:Class>
     
 
@@ -29287,6 +29297,20 @@ It regulates a piston which actuates the oven&apos;s crane jib vertically.</rdfs
         <rdf:type rdf:resource="http://iot.uni-trier.de/FTOnto#ValveOpen"/>
         <rdfs:comment>Valve open is an actuatable property of a valve.</rdfs:comment>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://iot.uni-trier.de/FTOnto#start_time">
+        <rdfs:comment>Die Data property wird als Startzeitpunkt der Services verwendet. Die Domain ist Procedure und als Range ist xsd:dateTime angegeben. Neben dem Startzeitpunkt wurde auch der Endzeitpunkt in die Ontologie integriert.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 

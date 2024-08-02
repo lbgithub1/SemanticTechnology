@@ -350,6 +350,7 @@
     <owl:ObjectProperty rdf:about="http://iot.uni-trier.de/FTOnto#executes_service">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://iot.uni-trier.de/FTOnto#Service"/>
+        <rdfs:comment>Die Object Property wird dafür verwendet um Services durchzuführen, da eine Procedure, Services durchführt, ist diese Property von zentraler Bedeutung.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -578,6 +579,7 @@ Machine components can consist of one ore more machine components.</rdfs:comment
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment>Die Object Property wird für den Import der Sensordaten benötigt. Als Domain ist der Eigenschaft Procedures zugeordnet und in den Ranges die Observation. Es dient dazu die einzelnen Sensordaten mit den Beobachtungen zu verknüpfen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -589,6 +591,7 @@ Machine components can consist of one ore more machine components.</rdfs:comment
         <owl:inverseOf rdf:resource="http://iot.uni-trier.de/FTOnto#is_result_of"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:comment>Die Object property ist für eine klare und übersichtliche Modellierung innerhalb der Ontologie angelegt worden. Mit den bereits existierenden has result-Eigenschaften gibt es Probleme mit dem Reasoner, da dieser durch die gleichen Ranges Observations falsch zuordnet. So wurden die Results der Observations auch den Services zugeordnet, was aus unserer Perspektive nicht korrekt ist. Durch den Unterstrich im Namen sind die Object Properties klar voneinander getrennt, wordurch der Zuordnungsfehler des Reasoners vermieden werden kann.  Die Inverse Of-Eigenschaft lautet is_result_of, welche ebenfals hinzugefügt wurde. Durch die beiden Eigenschaften kommt es zu keiner Verwechslung und die Ergebnisse können den entsprechenden Observations zugeordnet werden. Observation wurde als Domain und Result als range zugewiesen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1085,6 +1088,7 @@ This is an inverse property to the object property defied by Cheng et al. to pas
     <owl:ObjectProperty rdf:about="http://iot.uni-trier.de/FTOnto#is_result_of">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment>Die Eigenschaft ist die Inverse Of-Object property von has_result. Diese wurde aus dem gleichen Grund, wie has_result hinzugefügt. Damit alle Ergebnisse eindeutig zugeordnet werden können und keine Probleme mit dem Reasoner entstehen.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1573,6 +1577,7 @@ This is the inverse property to avoid the &apos;missing inverse property&apos; p
     <owl:DatatypeProperty rdf:about="http://iot.uni-trier.de/FTOnto#end_time">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Die Data property wird als Endzeitpunkt für die Services benötigt. Die Domain ist Procedure und als Range ist xsd:dateTime angegeben. Gleichzeitig existiert auch die Data property start_time.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -29139,6 +29144,20 @@ It regulates a piston which actuates the oven&apos;s crane jib vertically.</rdfs
         <rdf:type rdf:resource="http://iot.uni-trier.de/FTOnto#ValveOpen"/>
         <rdfs:comment>Valve open is an actuatable property of a valve.</rdfs:comment>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://iot.uni-trier.de/FTOnto#start_time">
+        <rdfs:comment>Die Data property wird als Startzeitpunkt der Services verwendet. Die Domain ist Procedure und als Range ist xsd:dateTime angegeben. Neben dem Startzeitpunkt wurde auch der Endzeitpunkt in die Ontologie integriert.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
