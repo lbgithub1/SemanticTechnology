@@ -1817,6 +1817,7 @@ The process is linked to the operation sequences by the object porperty &apos;ha
     <!-- http://iot.uni-trier.de/FTOnto#start_time -->
 
     <owl:DatatypeProperty rdf:about="http://iot.uni-trier.de/FTOnto#start_time">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
