@@ -4402,7 +4402,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:03</sosa:resultTime>
-        <rdfs:comment>AccObservation1 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:03</rdfs:comment>
+        <rdfs:comment>AccObservation1 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:03</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4416,7 +4416,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:12</sosa:resultTime>
-        <rdfs:comment>AccObservation10 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:12</rdfs:comment>
+        <rdfs:comment>AccObservation10 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:12</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4430,7 +4430,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:49</sosa:resultTime>
-        <rdfs:comment>AccObservation100 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:49</rdfs:comment>
+        <rdfs:comment>AccObservation100 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:49</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4468,7 +4468,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:13</sosa:resultTime>
-        <rdfs:comment>AccObservation11 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:13</rdfs:comment>
+        <rdfs:comment>AccObservation11 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:13</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4494,7 +4494,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:14</sosa:resultTime>
-        <rdfs:comment>AccObservation12 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:14</rdfs:comment>
+        <rdfs:comment>AccObservation12 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:14</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4520,7 +4520,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:15</sosa:resultTime>
-        <rdfs:comment>AccObservation13 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:15</rdfs:comment>
+        <rdfs:comment>AccObservation13 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4546,7 +4546,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:16</sosa:resultTime>
-        <rdfs:comment>AccObservation14 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:16</rdfs:comment>
+        <rdfs:comment>AccObservation14 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:16</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4572,7 +4572,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:17</sosa:resultTime>
-        <rdfs:comment>AccObservation15 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:17</rdfs:comment>
+        <rdfs:comment>AccObservation15 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:17</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4598,7 +4598,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:18</sosa:resultTime>
-        <rdfs:comment>AccObservation16 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:18</rdfs:comment>
+        <rdfs:comment>AccObservation16 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:18</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4624,7 +4624,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:19</sosa:resultTime>
-        <rdfs:comment>AccObservation17 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:19</rdfs:comment>
+        <rdfs:comment>AccObservation17 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:19</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4650,7 +4650,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:20</sosa:resultTime>
-        <rdfs:comment>AccObservation18 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:20</rdfs:comment>
+        <rdfs:comment>AccObservation18 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4676,7 +4676,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:21</sosa:resultTime>
-        <rdfs:comment>AccObservation19 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:21</rdfs:comment>
+        <rdfs:comment>AccObservation19 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:21</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4714,7 +4714,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:04</sosa:resultTime>
-        <rdfs:comment>AccObservation2 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:04</rdfs:comment>
+        <rdfs:comment>AccObservation2 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:04</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4728,7 +4728,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:05</sosa:resultTime>
-        <rdfs:comment>AccObservation20 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:05</rdfs:comment>
+        <rdfs:comment>AccObservation20 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:05</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4754,7 +4754,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:06</sosa:resultTime>
-        <rdfs:comment>AccObservation21 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:06</rdfs:comment>
+        <rdfs:comment>AccObservation21 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:06</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4780,7 +4780,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:07</sosa:resultTime>
-        <rdfs:comment>AccObservation22 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:07</rdfs:comment>
+        <rdfs:comment>AccObservation22 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:07</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4806,7 +4806,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:08</sosa:resultTime>
-        <rdfs:comment>AccObservation23 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:08</rdfs:comment>
+        <rdfs:comment>AccObservation23 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:08</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4832,7 +4832,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:09</sosa:resultTime>
-        <rdfs:comment>AccObservation24 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:09</rdfs:comment>
+        <rdfs:comment>AccObservation24 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:09</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4858,7 +4858,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:10</sosa:resultTime>
-        <rdfs:comment>AccObservation25 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:10</rdfs:comment>
+        <rdfs:comment>AccObservation25 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4884,7 +4884,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:11</sosa:resultTime>
-        <rdfs:comment>AccObservation26 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:11</rdfs:comment>
+        <rdfs:comment>AccObservation26 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:11</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4910,7 +4910,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:12</sosa:resultTime>
-        <rdfs:comment>AccObservation27 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:12</rdfs:comment>
+        <rdfs:comment>AccObservation27 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:12</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4936,7 +4936,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:13</sosa:resultTime>
-        <rdfs:comment>AccObservation28 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:13</rdfs:comment>
+        <rdfs:comment>AccObservation28 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:13</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4962,7 +4962,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:14</sosa:resultTime>
-        <rdfs:comment>AccObservation29 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:14</rdfs:comment>
+        <rdfs:comment>AccObservation29 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:14</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5000,7 +5000,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:05</sosa:resultTime>
-        <rdfs:comment>AccObservation3 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:05</rdfs:comment>
+        <rdfs:comment>AccObservation3 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:05</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5014,7 +5014,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:15</sosa:resultTime>
-        <rdfs:comment>AccObservation30 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:15</rdfs:comment>
+        <rdfs:comment>AccObservation30 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5040,7 +5040,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:16</sosa:resultTime>
-        <rdfs:comment>AccObservation31 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:16</rdfs:comment>
+        <rdfs:comment>AccObservation31 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:16</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5066,7 +5066,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:17</sosa:resultTime>
-        <rdfs:comment>AccObservation32 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:17</rdfs:comment>
+        <rdfs:comment>AccObservation32 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:17</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5092,7 +5092,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:18</sosa:resultTime>
-        <rdfs:comment>AccObservation33 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:18</rdfs:comment>
+        <rdfs:comment>AccObservation33 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:18</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5118,7 +5118,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:19</sosa:resultTime>
-        <rdfs:comment>AccObservation34 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:19</rdfs:comment>
+        <rdfs:comment>AccObservation34 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:19</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5144,7 +5144,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:20</sosa:resultTime>
-        <rdfs:comment>AccObservation35 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:20</rdfs:comment>
+        <rdfs:comment>AccObservation35 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5170,7 +5170,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:21</sosa:resultTime>
-        <rdfs:comment>AccObservation36 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:21</rdfs:comment>
+        <rdfs:comment>AccObservation36 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:21</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5196,7 +5196,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:22</sosa:resultTime>
-        <rdfs:comment>AccObservation37 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:22</rdfs:comment>
+        <rdfs:comment>AccObservation37 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:22</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5222,7 +5222,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:23</sosa:resultTime>
-        <rdfs:comment>AccObservation38 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:23</rdfs:comment>
+        <rdfs:comment>AccObservation38 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:23</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5248,7 +5248,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:24</sosa:resultTime>
-        <rdfs:comment>AccObservation39 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:24</rdfs:comment>
+        <rdfs:comment>AccObservation39 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:24</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5286,7 +5286,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:06</sosa:resultTime>
-        <rdfs:comment>AccObservation4 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:06</rdfs:comment>
+        <rdfs:comment>AccObservation4 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:06</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5300,7 +5300,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:25</sosa:resultTime>
-        <rdfs:comment>AccObservation40 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:25</rdfs:comment>
+        <rdfs:comment>AccObservation40 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5326,7 +5326,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:26</sosa:resultTime>
-        <rdfs:comment>AccObservation41 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:26</rdfs:comment>
+        <rdfs:comment>AccObservation41 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:26</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5352,7 +5352,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_2"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:02:27</sosa:resultTime>
-        <rdfs:comment>AccObservation42 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:27</rdfs:comment>
+        <rdfs:comment>AccObservation42 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:02:27</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5378,7 +5378,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:13</sosa:resultTime>
-        <rdfs:comment>AccObservation43 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:13</rdfs:comment>
+        <rdfs:comment>AccObservation43 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:13</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5404,7 +5404,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:14</sosa:resultTime>
-        <rdfs:comment>AccObservation44 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:14</rdfs:comment>
+        <rdfs:comment>AccObservation44 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:14</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5430,7 +5430,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:15</sosa:resultTime>
-        <rdfs:comment>AccObservation45 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:15</rdfs:comment>
+        <rdfs:comment>AccObservation45 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5456,7 +5456,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:16</sosa:resultTime>
-        <rdfs:comment>AccObservation46 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:16</rdfs:comment>
+        <rdfs:comment>AccObservation46 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:16</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5482,7 +5482,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:17</sosa:resultTime>
-        <rdfs:comment>AccObservation47 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:17</rdfs:comment>
+        <rdfs:comment>AccObservation47 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:17</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5508,7 +5508,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:18</sosa:resultTime>
-        <rdfs:comment>AccObservation48 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:18</rdfs:comment>
+        <rdfs:comment>AccObservation48 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:18</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5534,7 +5534,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:19</sosa:resultTime>
-        <rdfs:comment>AccObservation49 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:19</rdfs:comment>
+        <rdfs:comment>AccObservation49 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:19</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5572,7 +5572,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:07</sosa:resultTime>
-        <rdfs:comment>AccObservation5 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:07</rdfs:comment>
+        <rdfs:comment>AccObservation5 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:07</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5586,7 +5586,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:20</sosa:resultTime>
-        <rdfs:comment>AccObservation50 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:20</rdfs:comment>
+        <rdfs:comment>AccObservation50 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5612,7 +5612,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:21</sosa:resultTime>
-        <rdfs:comment>AccObservation51 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:21</rdfs:comment>
+        <rdfs:comment>AccObservation51 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:21</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5638,7 +5638,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:22</sosa:resultTime>
-        <rdfs:comment>AccObservation52 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:22</rdfs:comment>
+        <rdfs:comment>AccObservation52 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:22</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5664,7 +5664,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:23</sosa:resultTime>
-        <rdfs:comment>AccObservation53 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:23</rdfs:comment>
+        <rdfs:comment>AccObservation53 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:23</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5690,7 +5690,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:24</sosa:resultTime>
-        <rdfs:comment>AccObservation54 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:24</rdfs:comment>
+        <rdfs:comment>AccObservation54 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:24</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5716,7 +5716,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:25</sosa:resultTime>
-        <rdfs:comment>AccObservation55 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:25</rdfs:comment>
+        <rdfs:comment>AccObservation55 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5742,7 +5742,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:26</sosa:resultTime>
-        <rdfs:comment>AccObservation56 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:26</rdfs:comment>
+        <rdfs:comment>AccObservation56 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:26</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5768,7 +5768,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:27</sosa:resultTime>
-        <rdfs:comment>AccObservation57 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:27</rdfs:comment>
+        <rdfs:comment>AccObservation57 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:27</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5794,7 +5794,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:28</sosa:resultTime>
-        <rdfs:comment>AccObservation58 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:28</rdfs:comment>
+        <rdfs:comment>AccObservation58 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:28</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5820,7 +5820,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:29</sosa:resultTime>
-        <rdfs:comment>AccObservation59 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:29</rdfs:comment>
+        <rdfs:comment>AccObservation59 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:29</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5858,7 +5858,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:08</sosa:resultTime>
-        <rdfs:comment>AccObservation6 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:08</rdfs:comment>
+        <rdfs:comment>AccObservation6 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:08</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5872,7 +5872,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:30</sosa:resultTime>
-        <rdfs:comment>AccObservation60 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:30</rdfs:comment>
+        <rdfs:comment>AccObservation60 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5898,7 +5898,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:31</sosa:resultTime>
-        <rdfs:comment>AccObservation61 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:31</rdfs:comment>
+        <rdfs:comment>AccObservation61 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:31</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5924,7 +5924,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:32</sosa:resultTime>
-        <rdfs:comment>AccObservation62 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:32</rdfs:comment>
+        <rdfs:comment>AccObservation62 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:32</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5950,7 +5950,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_3"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:03:33</sosa:resultTime>
-        <rdfs:comment>AccObservation63 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:33</rdfs:comment>
+        <rdfs:comment>AccObservation63 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:03:33</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5976,7 +5976,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:03</sosa:resultTime>
-        <rdfs:comment>AccObservation64 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:03</rdfs:comment>
+        <rdfs:comment>AccObservation64 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:03</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6002,7 +6002,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:04</sosa:resultTime>
-        <rdfs:comment>AccObservation65 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:04</rdfs:comment>
+        <rdfs:comment>AccObservation65 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:04</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6028,7 +6028,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:05</sosa:resultTime>
-        <rdfs:comment>AccObservation66 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:05</rdfs:comment>
+        <rdfs:comment>AccObservation66 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:05</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6054,7 +6054,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:06</sosa:resultTime>
-        <rdfs:comment>AccObservation67 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:06</rdfs:comment>
+        <rdfs:comment>AccObservation67 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:06</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6080,7 +6080,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:07</sosa:resultTime>
-        <rdfs:comment>AccObservation68 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:07</rdfs:comment>
+        <rdfs:comment>AccObservation68 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:07</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6106,7 +6106,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:08</sosa:resultTime>
-        <rdfs:comment>AccObservation69 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:08</rdfs:comment>
+        <rdfs:comment>AccObservation69 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:08</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6144,7 +6144,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:09</sosa:resultTime>
-        <rdfs:comment>AccObservation7 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:09</rdfs:comment>
+        <rdfs:comment>AccObservation7 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:09</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6158,7 +6158,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:09</sosa:resultTime>
-        <rdfs:comment>AccObservation70 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:09</rdfs:comment>
+        <rdfs:comment>AccObservation70 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:09</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6184,7 +6184,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:10</sosa:resultTime>
-        <rdfs:comment>AccObservation71 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:10</rdfs:comment>
+        <rdfs:comment>AccObservation71 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6210,7 +6210,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:11</sosa:resultTime>
-        <rdfs:comment>AccObservation72 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:11</rdfs:comment>
+        <rdfs:comment>AccObservation72 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:11</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6236,7 +6236,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:12</sosa:resultTime>
-        <rdfs:comment>AccObservation73 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:12</rdfs:comment>
+        <rdfs:comment>AccObservation73 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:12</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6262,7 +6262,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:13</sosa:resultTime>
-        <rdfs:comment>AccObservation74 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:13</rdfs:comment>
+        <rdfs:comment>AccObservation74 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:13</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6288,7 +6288,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:14</sosa:resultTime>
-        <rdfs:comment>AccObservation75 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:14</rdfs:comment>
+        <rdfs:comment>AccObservation75 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:14</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6314,7 +6314,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:15</sosa:resultTime>
-        <rdfs:comment>AccObservation76 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:15</rdfs:comment>
+        <rdfs:comment>AccObservation76 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6340,7 +6340,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:16</sosa:resultTime>
-        <rdfs:comment>AccObservation77 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:16</rdfs:comment>
+        <rdfs:comment>AccObservation77 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:16</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6366,7 +6366,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:17</sosa:resultTime>
-        <rdfs:comment>AccObservation78 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:17</rdfs:comment>
+        <rdfs:comment>AccObservation78 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:17</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6392,7 +6392,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:18</sosa:resultTime>
-        <rdfs:comment>AccObservation79 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:18</rdfs:comment>
+        <rdfs:comment>AccObservation79 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:18</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6430,7 +6430,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:10</sosa:resultTime>
-        <rdfs:comment>AccObservation8 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:10</rdfs:comment>
+        <rdfs:comment>AccObservation8 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6444,7 +6444,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:19</sosa:resultTime>
-        <rdfs:comment>AccObservation80 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:19</rdfs:comment>
+        <rdfs:comment>AccObservation80 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:19</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6470,7 +6470,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:20</sosa:resultTime>
-        <rdfs:comment>AccObservation81 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:20</rdfs:comment>
+        <rdfs:comment>AccObservation81 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6496,7 +6496,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_4"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:04:21</sosa:resultTime>
-        <rdfs:comment>AccObservation82 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:21</rdfs:comment>
+        <rdfs:comment>AccObservation82 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:04:21</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6522,7 +6522,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:32</sosa:resultTime>
-        <rdfs:comment>AccObservation83 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:32</rdfs:comment>
+        <rdfs:comment>AccObservation83 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:32</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6548,7 +6548,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:33</sosa:resultTime>
-        <rdfs:comment>AccObservation84 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:33</rdfs:comment>
+        <rdfs:comment>AccObservation84 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:33</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6574,7 +6574,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:34</sosa:resultTime>
-        <rdfs:comment>AccObservation85 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:34</rdfs:comment>
+        <rdfs:comment>AccObservation85 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:34</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6600,7 +6600,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:35</sosa:resultTime>
-        <rdfs:comment>AccObservation86 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:35</rdfs:comment>
+        <rdfs:comment>AccObservation86 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:35</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6626,7 +6626,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:36</sosa:resultTime>
-        <rdfs:comment>AccObservation87 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:36</rdfs:comment>
+        <rdfs:comment>AccObservation87 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:36</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6652,7 +6652,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:37</sosa:resultTime>
-        <rdfs:comment>AccObservation88 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:37</rdfs:comment>
+        <rdfs:comment>AccObservation88 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:37</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6678,7 +6678,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:38</sosa:resultTime>
-        <rdfs:comment>AccObservation89 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:38</rdfs:comment>
+        <rdfs:comment>AccObservation89 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:38</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6716,7 +6716,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_1"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:01:11</sosa:resultTime>
-        <rdfs:comment>AccObservation9 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:11</rdfs:comment>
+        <rdfs:comment>AccObservation9 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:01:11</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6730,7 +6730,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:39</sosa:resultTime>
-        <rdfs:comment>AccObservation90 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:39</rdfs:comment>
+        <rdfs:comment>AccObservation90 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:39</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6756,7 +6756,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:40</sosa:resultTime>
-        <rdfs:comment>AccObservation91 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:40</rdfs:comment>
+        <rdfs:comment>AccObservation91 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:40</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6782,7 +6782,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:41</sosa:resultTime>
-        <rdfs:comment>AccObservation92 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:41</rdfs:comment>
+        <rdfs:comment>AccObservation92 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:41</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6808,7 +6808,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:42</sosa:resultTime>
-        <rdfs:comment>AccObservation93 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:42</rdfs:comment>
+        <rdfs:comment>AccObservation93 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:42</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6834,7 +6834,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:43</sosa:resultTime>
-        <rdfs:comment>AccObservation94 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:43</rdfs:comment>
+        <rdfs:comment>AccObservation94 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:43</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6860,7 +6860,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:44</sosa:resultTime>
-        <rdfs:comment>AccObservation95 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:44</rdfs:comment>
+        <rdfs:comment>AccObservation95 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:44</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6886,7 +6886,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:45</sosa:resultTime>
-        <rdfs:comment>AccObservation96 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:45</rdfs:comment>
+        <rdfs:comment>AccObservation96 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:45</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6912,7 +6912,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:46</sosa:resultTime>
-        <rdfs:comment>AccObservation97 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:46</rdfs:comment>
+        <rdfs:comment>AccObservation97 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:46</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6938,7 +6938,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:47</sosa:resultTime>
-        <rdfs:comment>AccObservation98 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:47</rdfs:comment>
+        <rdfs:comment>AccObservation98 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:47</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6964,7 +6964,7 @@ This sensor observes the observable property &apos;MM_1_Compressor_8_Vibration&a
         <sosa:observedProperty rdf:resource="http://iot.uni-trier.de/FTOnto#VGR_1_Crane_Jib_Acceleration"/>
         <sosa:usedProcedure rdf:resource="http://iot.uni-trier.de/FTOnto#Service_Execution_VGR_1_5"/>
         <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-03T11:05:48</sosa:resultTime>
-        <rdfs:comment>AccObservation99 is an cceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:48</rdfs:comment>
+        <rdfs:comment>AccObservation99 is an acceleration observation from the sensor BMX055_Pi_1_AccSensor_1 measured at  2024-07-03T11:05:48</rdfs:comment>
     </owl:NamedIndividual>
     
 
