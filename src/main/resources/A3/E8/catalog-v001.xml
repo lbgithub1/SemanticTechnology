@@ -2,6 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Entered Import Resolution" name="http://www.owl-ontologies.com/mason.owl" uri="onto.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1722694658521" name="http://www.semanticweb.org/fopra/ProductionFactory" uri="onto.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1725440762847" name="duplicate:http://www.semanticweb.org/fopra/ProductionFactory" uri="onto.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1725440762847" name="duplicate:http://www.semanticweb.org/fopra/ProductionFactory" uri="onto_old.owl"/>
     </group>
 </catalog>

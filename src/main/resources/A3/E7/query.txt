@@ -4,24 +4,27 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
 SELECT ?execution ?start_time ?end_time
 WHERE{
+	# subquery to get failed service executions
 	{
 		SELECT ?execution
 		WHERE {
 			?execution a sosa:Procedure ;
 				   iot:executes_service iot:Service_VGR_Pick_Up_And_Transport_With_Machine_VGR_1_With_Start_Sink_2_With_End_Waiting_Platform;
 				   iot:has_observation ?observation .
-	
+			
+			# get the light barrier results for all service executions
 			?observation sosa:observedProperty iot:HBW_1_Light_Barrier_3_Interrupted ;
 				     sosa:hasSimpleResult ?result .
 	
 		}
+		# Group by execution to get each result
 		GROUP BY ?execution
+		# if the timeseries contains the value 1 then the service execution was successful, else it failed
+		# if max value found is 0 in the timeseries then it can't contain the value 1 therefore is must be failed
 		HAVING (MAX(?result) = 0)
 	}
 	
+	# get start and ending time of the service execution
 	?execution iot:start_time ?start_time;
 		   iot:end_time ?end_time
-
 }
-
-
